@@ -246,7 +246,7 @@ function init_gear_sets()
         neck="Caro Necklace",
         ear1="Moonshade Earring",
         ear2="Ishvara Earring",
-		ring1="Llabrat Ring",
+		ring1="Ilabrat Ring",
 		ring2="Niqmaddu Ring",
 		back=gear.stp_jse_back,
         waist="Grunfeld Rope",
@@ -292,7 +292,7 @@ function init_gear_sets()
         body="Herculean Vest",
 		back=gear.dex_wsd_jse_back,
 		hands="Meg. Gloves +2",
-		ring1="Llabrat Ring",
+		ring1="Ilabrat Ring",
 		ring2="Niqmaddu Ring",
 		legs="Lustratio Subligar +1",
 		feet="Lustratio Leggings +1"
@@ -423,7 +423,7 @@ function init_gear_sets()
 	sets.resting = {}
 
     sets.idle = {
-        ammo="Staunch Tathlum",
+        ammo="Homiliary",
 		head="Runeist's Bandeau +2",
 		body="Runeist's Coat +2",
 		hands="Turms Mittens +1",
