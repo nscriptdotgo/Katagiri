@@ -10,6 +10,7 @@ function user_job_setup()
 	state.Weapons:options('Default','DualWeapons','DualSavageWeapons','DualLeadenRanged','DualLeadenMelee','DualAeolian','DualLeadenMeleeAcc','DualRanged','None')
 	state.CompensatorMode:options('Always','300','1000','Never')
 
+    autows = 'Savage Blade'
     gear.RAbullet = "Decimating Bullet"
     gear.WSbullet = "Decimating Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
@@ -173,13 +174,13 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = {
         ammo=gear.WSbullet,
-        head="Herculean Helm",
+        head=gear.herculean_wsd_head,
         neck="Caro Necklace",
         ear1="Moonshade Earring",
         ear2="Ishvara Earring",
         body="Meg. Cuirie +2",
         hands="Meg. Gloves +2",
-        ring1="Rajas Ring",
+        ring1="Karieyh Ring",
         ring2="Rufescent Ring",
         dabsaack=gear.str_wsd_jse_back,
         waist="Soil Belt",
@@ -290,7 +291,8 @@ function init_gear_sets()
     
 
     -- Idle sets
-    sets.idle = {ammo=gear.RAbullet,
+    sets.idle = {
+        ammo=gear.RAbullet,
         head="Meghanada Visor +1",
         neck="Twilight Torque",
         ear1="Etiolation Earring",
@@ -390,11 +392,11 @@ function init_gear_sets()
         -- neck="Iskur Gorget",
         ear1="Suppanomimi",
         ear2="Brutal Earring",
-		-- body="Adhemar Jacket +1",
+		body="Adhemar Jacket +1",
         hands="Adhemar Wrist. +1",
         ring1="Epona's Ring",
         ring2="Petrov Ring",
-		back=gear.tp_jse_back,
+		back=gear.str_wsd_jse_back,
         waist="Windbuffet Belt +1",
         -- legs="Samnuha Tights",
         feet=gear.herculean_ta_feet

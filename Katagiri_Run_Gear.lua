@@ -165,7 +165,7 @@ function init_gear_sets()
 		--ring1="Stikini Ring +1",
 		ring2="Acumen Ring",
         --ring2="Fenrir Ring +1",
-        --back="Evasionist's Cape",
+        back="Evasionist's Cape",
         waist="Eschan Stone",
     }
 	sets.precast.JA['Swipe'] = sets.precast.JA['Lunge']
@@ -393,7 +393,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum",
         --head=gear.Herc_DT_head,
         --body="Vrikodara Jupon", -- 13
-        --hands="Buremte Gloves", --(13)
+        hands="Buremte Gloves", --(13)
         legs="Aya. Cosciales +2",
         --feet="Skaoi Boots", --7
         --neck="Phalaina Locket", -- 4(4)
@@ -408,8 +408,16 @@ function init_gear_sets()
 		
 	sets.midcast['Wild Carrot'] = set_combine(sets.midcast.Cure, {})
 		
-	sets.Self_Healing = {hands="Buremte Gloves",ring2="Kunaji Ring",waist="Gishdubar Sash"}
-	sets.Cure_Received = {hands="Buremte Gloves",ring2="Kunaji Ring",waist="Gishdubar Sash"}
+	sets.Self_Healing = {
+		hands="Buremte Gloves",
+		ring2="Kunaji Ring",
+		waist="Gishdubar Sash"
+	}
+	sets.Cure_Received = {
+		hands="Buremte Gloves",
+		ring2="Kunaji Ring",
+		waist="Gishdubar Sash"
+	}
 	sets.Self_Refresh = set_combine(sets.midcast['Enhancing Magic'], {head="Erilaz Galea +1"})
 	sets.Phalanx_Received = {main="Deacon Sword",hands=gear.herculean_phalanx_hands,feet=gear.herculean_nuke_feet}
 	
