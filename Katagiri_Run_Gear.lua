@@ -599,8 +599,8 @@ function init_gear_sets()
 		waist="Kentarch Belt +1",
 		ear1="Brutal Earring",
 		ear2="Cessance Earring",
-		ring1="Niqmaddu Ring",
-		ring2="Epona's Ring",
+		ring1="Petrov Ring",
+		ring2="Ilabrat Ring",
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
     }
     sets.engaged.SomeAcc = {
