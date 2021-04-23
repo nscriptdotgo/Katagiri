@@ -2,12 +2,12 @@ function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
-    state.HybridMode:options('Normal')
+    state.HybridMode:options('Normal','DTLite')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Montante','Anguta')
+	state.Weapons:options('Montante','Anguta','Zulfiqar','Cronus')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -15,11 +15,12 @@ function user_job_setup()
 	-- Additional local binds
 	send_command('bind ^` input /ja "Hasso" <me>')
 	send_command('bind !` input /ja "Seigan" <me>')
-    send_command('bind @e input /ms "Endark" <me>')
+    send_command('bind @e input /ms "Endark II" <me>')
 	send_command('bind @d input /ma "Dread Spikes" <me>')
 	send_command('bind @` gs c cycle SkillchainMode')
 
     autows = 'Torcleaver'
+    autowstp = 1750
 	
 	select_default_macro_book()
 end
@@ -74,8 +75,8 @@ function init_gear_sets()
 	sets.precast.JA['Arcane Circle'] = {}
     sets.precast.JA['Souleater']    = {head="Ignominy burgeonet +1"}
     sets.precast.JA['Weapon Bash']   = {hands="Ignominy Gauntlets +1"}
-	sets.precast.JA['Nether Void'] = {}
-    sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass"}
+	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard"}
+    sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +1"}
     sets.precast.JA['Dark Seal']    = {head="Fallen's burgeonet +1"}
 	sets.precast.JA['Last Resort'] = {back=Ankou.WSD}
                    
@@ -240,7 +241,7 @@ function init_gear_sets()
 		hands=Odyssean.Hands.WSD,
         ring1="Karieyh Ring",
         ring2="Titan Ring",
-        back=Ankou.WSD,
+        back=Ankou.VIT,
         waist="Light Belt",
         legs=Odyssean.Legs.WS,
         feet="Sulevia's Leggings +2"
@@ -257,10 +258,22 @@ function init_gear_sets()
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
+    sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
+        head=Odyssean.Head.WSD,
+        hands=Odyssean.Hands.WSD,
+        ear1="Brutal Earring",
+        ring1="Karieyh Ring",
+        ring2="Rufescent Ring",
+        neck="Caro Necklace",
+        waist="Grunfeld Rope",
+        legs="Sulevia Cuisses +1",
+        feet="Sulevia Leggings +2"
+    })
 	
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
+        ammo="Brigantia Pebble",
         head=Odyssean.Head.WSD,
-        hands=Odyssean.Hands.WS,
         ring2="Niqmaddu Ring",
         neck="Light Gorget",
         waist="Light Belt",
@@ -424,6 +437,21 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",neck="Asperity Necklace",ear1="Brutal Earring",ear2="Sherida Earring",
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
 		back="Ankou's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+    sets.engaged.DTLite = {
+        ammo="Seething Bomblet+1",
+        head="Sulevia's Mask +1",
+        body="Sulevia's Plate. +1",
+        hands="Sulev. Gauntlets +2",
+        legs="Sulevi. Cuisses +1",
+        feet="Amm Greaves",
+        neck="Twilight Torque",
+        waist="Flume Belt +1",
+        left_ear="Odnowa Earring +1",
+        right_ear="Ethereal Earring",
+        left_ring="Gelatinous Ring +1",
+        right_ring="Defending Ring",
+        back="Shadow Mantle", 
+    }
 --Example sets:
 --[[
     sets.engaged.Adoulin = {}
@@ -544,6 +572,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Montante = {main="Montante +1",sub="Utu Grip"}
     sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
+    sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
 	sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
 	
     end
@@ -574,3 +603,38 @@ buff_spell_lists = {
         {Name='Endark II',Buff='Endark',SpellID=311,Reapply=false},
     },
 }
+function check_trust()
+	if not moving then
+		if state.AutoTrustMode.value and not data.areas.cities:contains(world.area) and (buffactive['Elvorseal'] or buffactive['Reive Mark'] or not player.in_combat) then
+			local party = windower.ffxi.get_party()
+			if party.p5 == nil then
+				local spell_recasts = windower.ffxi.get_spell_recasts()
+			
+				if spell_recasts[980] < spell_latency and not have_trust("Yoran-Oran") then
+					windower.send_command('input /ma "Sylvie (UC)" <me>')
+					tickdelay = os.clock() + 3
+					return true
+				elseif spell_recasts[952] < spell_latency and not have_trust("Koru-Moru") then
+					windower.send_command('input /ma "Arciela II" <me>')
+					tickdelay = os.clock() + 3
+					return true
+				elseif spell_recasts[979] < spell_latency and not have_trust("Selh'teus") then
+					windower.send_command('input /ma "Ulmia" <me>')
+					tickdelay = os.clock() + 3
+					return true
+				elseif spell_recasts[967] < spell_latency and not have_trust("Qultada") then
+					windower.send_command('input /ma "Joachim" <me>')
+					tickdelay = os.clock() + 3
+					return true
+				elseif spell_recasts[914] < spell_latency and not have_trust("Ulmia") then
+					windower.send_command('input /ma "King of Hearts" <me>')
+					tickdelay = os.clock() + 3
+					return true
+				else
+					return false
+				end
+			end
+		end
+	end
+	return false
+end

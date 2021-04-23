@@ -580,7 +580,7 @@ function init_gear_sets()
     --     back=gear.enmity_jse_back,waist="Engraved Belt",legs="Rune. Trousers +3",feet="Erilaz Greaves +1"}
 	
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Brutal Earring"}
+	sets.MaxTP = {ear1="Sherida Earring"}
 	sets.AccMaxTP = {ear1="Moonshade Earring"}
 
 	--------------------------------------
@@ -597,7 +597,7 @@ function init_gear_sets()
 		feet="Carmine Greaves",
 		neck="Anu Torque",
 		waist="Kentarch Belt +1",
-		ear1="Brutal Earring",
+		ear1="Sherida Earring",
 		ear2="Cessance Earring",
 		ring1="Petrov Ring",
 		ring2="Ilabrat Ring",
@@ -632,7 +632,7 @@ function init_gear_sets()
 		feet="Meg. Jam. +2",
 		neck="Anu Torque",
 		waist="Ioskeha Belt",
-		left_ear="Brutal Earring",
+		left_ear="Sherida Earring",
 		right_ear="Cessance Earring",
 		left_ring="Moonbeam Ring",
 		right_ring="Defending Ring",
