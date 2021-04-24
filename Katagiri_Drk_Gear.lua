@@ -52,12 +52,15 @@ function init_gear_sets()
 
     
     Odyssean.Feet = {}
+    Odyssean.Body = {}
     Odyssean.Feet.FC = { name="Odyssean Greaves", augments={'Attack+20','"Fast Cast"+4','Accuracy+15',}}
+    Odyssean.Body.FC = { name="Odyssean Chestplate", augments={'MND+11','"Fast Cast"+3','Accuracy+14',}}
 
 	--- Valorous ---
 	Valorous = {}
     Valorous.Feet = {}
     Valorous.Body = {}
+    
    
     Valorous.Feet.TH = { name="Valorous Greaves", augments={'CHR+13','INT+1','"Treasure Hunter"+2','Accuracy+12 Attack+12','Mag. Acc.+1 "Mag.Atk.Bns."+1',}}
     Valorous.Feet.TP = { name="Valorous Greaves", augments={'Accuracy+27','"Store TP"+6','INT+1',}}
@@ -96,7 +99,7 @@ function init_gear_sets()
         -- ammo="Impatiens",
         head="Fallen's Burgonet +1",
         neck="Voltsurge Torque",
-        body="Fallen's Cuirass +1",
+        body=Odyssean.Body.FC,
         ear1="Etiolation Earring",
         ear2="Loquacious Earring",
         -- hands="Leyline Gloves",
