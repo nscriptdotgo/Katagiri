@@ -264,10 +264,21 @@ function init_gear_sets()
 		back=gear.stp_jse_back,
         waist="Grunfeld Rope",
     }
-	-- sets.precast.WS.SomeAcc = {ammo="Voluspa Tathlum",
-    --         head="Adhemar Bonnet +1 +1",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Sherida Earring",
-    --         body="Ayanmo Corazza +2",hands="Meg. Gloves +2",ring1="Niqmaddu Ring",ring2="Regal Ring",
-    --         back=gear.da_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet=gear.herculean_ta_feet}
+	sets.precast.WS.SomeAcc = {
+		-- ammo="Voluspa Tathlum",
+        head="Adhemar Bonnet +1",
+		neck="Light Gorget",
+		ear1="Moonshade Earring",
+		ear2="Sherida Earring",
+        body="Ayanmo Corazza +1",
+		hands="Meg. Gloves +2",
+		ring1="Niqmaddu Ring",
+		ring2="Ilabrat Ring",
+        back=gear.da_jse_back,
+		waist="Fotia Belt",
+		legs="Meg. Chausses +2",
+		feet=gear.herculean_ta_feet
+	}
 	-- sets.precast.WS.Acc = {ammo="C. Palug Stone",
     --         head="Dampening Tam",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Sherida Earring",
     --         body="Ayanmo Corazza +2",hands="Meg. Gloves +2",ring1="Niqmaddu Ring",ring2="Regal Ring",
@@ -301,7 +312,7 @@ function init_gear_sets()
     sets.precast.WS['Dimidiation'] = set_combine(sets.precast.WS,
 	{
 		ammo="Knobkierrie",
-        head="Herculean Helm",
+        head=gear.herculean_wsd_head,
         body="Herculean Vest",
 		back=gear.dex_wsd_jse_back,
 		hands="Meg. Gloves +2",
