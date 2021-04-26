@@ -11,6 +11,7 @@ function user_job_setup()
 	state.CompensatorMode:options('Always','300','1000','Never')
 
     autows = 'Savage Blade'
+    autowstp = 1750
     gear.RAbullet = "Decimating Bullet"
     gear.WSbullet = "Decimating Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.

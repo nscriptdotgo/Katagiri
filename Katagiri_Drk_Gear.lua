@@ -406,10 +406,10 @@ function init_gear_sets()
      
 	-- Engaged sets
 	sets.engaged = {
-        ammo="Seething Bomblet +1",
+        ammo="Ginsen",
 		head="Flamma Zucchetto +2",
 		body=Valorous.Body.WSD,
-		hands="Emicho Gauntlets",
+		hands="Flamma Manopolas +2",
 		legs=Odyssean.Legs.TP,
 		feet="Flamma Gambieras +2",
 		neck="Lissome Necklace",
@@ -449,10 +449,10 @@ function init_gear_sets()
         feet="Amm Greaves",
         neck="Twilight Torque",
         waist="Flume Belt +1",
-        left_ear="Odnowa Earring +1",
-        right_ear="Ethereal Earring",
-        left_ring="Gelatinous Ring +1",
-        right_ring="Defending Ring",
+        ear1="Odnowa Earring +1",
+        ear2="Ethereal Earring",
+        ring1="Moonbeam Ring",
+        ring2="Defending Ring",
         back="Shadow Mantle", 
     }
 --Example sets:
