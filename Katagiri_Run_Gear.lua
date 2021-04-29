@@ -107,7 +107,7 @@ function init_gear_sets()
     sets.precast.JA['Rayke'] = set_combine(sets.Enmity,{feet="Futhark Boots +1"})
     sets.precast.JA['Elemental Sforzo'] = set_combine(sets.Enmity,{body="Futhark Coat +3"})
     sets.precast.JA['Swordplay'] = set_combine(sets.Enmity, {hands="Futhark Mitons +1"})
-    sets.precast.JA['Embolden'] = set_combine(sets.Enmity,{})
+    sets.precast.JA['Embolden'] = set_combine(sets.Enmity,{back="Evasionist's Cape"})
     sets.precast.JA['One for All'] = set_combine(sets.Enmity, {
 		ammo="Staunch Tathlum",
 	    head="Runeist's Bandeau +2", --99
@@ -116,7 +116,7 @@ function init_gear_sets()
 		--hands="Regal Gauntlets", --205
         legs="Futhark Trousers +2", --87
 		feet="Runeist Bottes +1", --64
-        neck="Veisa Collar", --6/6
+        neck="Futhark Torque +1", --6/6
         ear1="Odnowa Earring +1", --100
         ear2="Ethereal Earring", --100
 		--ear1="Tuisto Earring",
@@ -158,7 +158,7 @@ function init_gear_sets()
         --body="Samnuha Coat", --30
         hands="Taeon Gloves", --42
         legs="Shneddick tights +1", --20
-        --feet="Herculean Boots", --10
+        feet="Herculean Boots", --10
         neck="Sanctity Necklace", --13
         ear1="Hecate's Earring", --6
         ear2="Friomisi Earring", --10
@@ -472,10 +472,21 @@ function init_gear_sets()
 		
     sets.idle.Sphere = set_combine(sets.idle,{body="Mekosu. Harness"})
 			
-	sets.idle.Tank = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-        head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-        body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Defending Ring",ring2="Moonbeam Ring",
-        back="Shadow Mantle",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
+	sets.idle.Tank = {
+		ammo="Staunch Tathlum",
+        head="Fu. Bandeau +1",
+		neck="Futhark Torque +1",
+		ear1="Odnowa Earring +1",
+		ear2="Ethereal Earring",
+        body="Runeist's Coat +2",
+		hands=gear.herculean_dt_hands,
+		ring1="Defending Ring",
+		ring2="Moonbeam Ring",
+        back="Shadow Mantle",
+		waist="Flume Belt +1",
+		legs="Eri. Leg Guards +1",
+		feet="Erilaz Greaves +1"
+	}
 
 	sets.idle.KiteTank = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Vim Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
@@ -573,7 +584,7 @@ function init_gear_sets()
         head="Erilaz Galea +1",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
-		-- ear2="Sanare Earring",
+		ear2="Ethereal Earring",
         body="Runeist's Coat +2",
 		hands="Turms Mittens +1",
 		ring1="Moonbeam Ring",
