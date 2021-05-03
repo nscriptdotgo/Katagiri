@@ -197,11 +197,13 @@ function init_gear_sets()
     sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
         head="Pillager's Bonnet +1",
         body="Meg. Cuirie +1",
+        hands="Meg. Gloves +2",
         neck="Caro Necklace",
-        ear1="Ishvara Earring",
+        ring1="Ilabrat Ring",
+        ear1="Sherida Earring",
         ear2="Moonshade Earring",
         legs="Lustratio Subligar +1",
-        waist="Grundfeld Rope",
+        waist="Grunfeld Rope",
         feet="Lustratio Leggings +1"
     })
     sets.precast.WS["Rudra's Storm"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {neck="Caro Necklace",ear1="Moonshade Earring",body="Meg. Cuirie +2",back=gear.wsd_jse_back})
@@ -373,7 +375,7 @@ function init_gear_sets()
         head="Adhemar Bonnet +1",
 		neck="Anu Torque",
 		ear1="Sherida Earring",
-		ear2="Cessance Earring",
+		ear2="Telos Earring",
         body="Adhemar Jacket +1",
 		hands="Adhemar Wristbands +1",
 		ring1="Petrov Ring",

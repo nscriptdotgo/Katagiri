@@ -37,7 +37,8 @@ function user_job_setup()
 	send_command('bind ^@!` gs c cycle SkillchainMode')
 	send_command('bind !r gs c weapons Lionheart;gs c update')
 
-	autows = 'Dimidiation'
+	autows = 'Resolution'
+	autowstp = 1250
 
 	
 	select_default_macro_book()
@@ -156,7 +157,7 @@ function init_gear_sets()
         --ammo="Pemphredo Tathlum",
         head="Herculean Helm", --10
         --body="Samnuha Coat", --30
-        hands="Taeon Gloves", --42
+        hands="Leyline Gloves", --42
         legs="Shneddick tights +1", --20
         feet="Herculean Boots", --10
         neck="Sanctity Necklace", --13
@@ -301,6 +302,8 @@ function init_gear_sets()
 		neck="Light Gorget",
 		feet="Herculean Boots",
 		waist="Light Belt",
+		ear1="Sherida Earring",
+		ear2="Moonshade Earring",
 		ring1="Niqmaddu Ring",
 		ring2="Rajas Ring"
 
@@ -488,10 +491,21 @@ function init_gear_sets()
 		feet="Erilaz Greaves +1"
 	}
 
-	sets.idle.KiteTank = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-        head="Fu. Bandeau +1",neck="Vim Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-        body="Futhark Coat +1",hands=gear.herculean_dt_hands,ring1="Defending Ring",ring2="Moonbeam Ring",
-        back="Moonbeam Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Hippo. Socks +1"}
+	sets.idle.KiteTank = {
+		ammo="Staunch Tathlum",
+        head="Fu. Bandeau +1",
+		neck="Futhark Torque +1",
+		ear1="Odnowa Earring +1",
+		ear2="Ethereal Earring",
+        body="Runeist's Coat +2",
+		hands="Turms Mittens +1",
+		ring1="Defending Ring",
+		ring2="Moonbeam Ring",
+        back="Shadow Mantle",
+		waist="Flume Belt +1",
+		legs="Carmine Cuisses +1",
+		feet="Erilaz Greaves +1"
+	}
 
 	sets.idle.Weak = {main="Aettir",sub="Utu Grip",ammo="Homiliary",
 		head="Rawhide Mask",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
@@ -623,7 +637,6 @@ function init_gear_sets()
 	--------------------------------------
 
     sets.engaged = {
-        sub="Refined Grip +1",
 		ammo="Ginsen",
 		head="Adhemar Bonnet +1",
 		body="Adhemar Jacket +1",
@@ -631,11 +644,11 @@ function init_gear_sets()
 		legs="Meg. Chausses +2",
 		feet="Carmine Greaves",
 		neck="Anu Torque",
-		waist="Kentarch Belt +1",
+		waist="Windbuffet Belt +1",
 		ear1="Sherida Earring",
-		ear2="Cessance Earring",
-		ring1="Petrov Ring",
-		ring2="Ilabrat Ring",
+		ear2="Telos Earring",
+		ring1="Epona's Ring",
+		ring2="Niqmaddu Ring",
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
     }
     sets.engaged.SomeAcc = {
@@ -668,7 +681,7 @@ function init_gear_sets()
 		neck="Anu Torque",
 		waist="Ioskeha Belt",
 		left_ear="Sherida Earring",
-		right_ear="Cessance Earring",
+		right_ear="Telos Earring",
 		left_ring="Moonbeam Ring",
 		right_ring="Defending Ring",
 		back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
@@ -694,7 +707,7 @@ function init_gear_sets()
 		ammo="Seething Bomblet +1",
 		head="Rune. Bandeau +2",
 		neck="Anu Torque",
-		ear1="Cessance Earring",
+		ear1="Telos Earring",
 		ear2="Sherida Earring",
 		body="Runeist's Coat +2",
 		hands="Turms Mittens +1",
