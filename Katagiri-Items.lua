@@ -38,6 +38,7 @@ gear.herculean_wsd_body = {name="Herculean Vest",augments={'Accuracy+11','Weapon
 gear.herculean_wsd_head = {name="Herculean Helm",augments={'Accuracy+8','Attack+24','Weapon skill damage +3%','DEX+5',}}
 gear.herculean_dt_legs = {name="Herculean Trousers",augments={'Attack+15','Damage taken-4%','STR+3','Accuracy+12',}}
 gear.herculean_wsd_legs = {name="Herculean Trousers",augments={'Weapon skill damage +5%','DEX+8','Accuracy+13','Attack+14',}}
+gear.herculean_wsd_str_legs = {name="Herculean Trousers",augments={'Weapon skill damage +4%','STR+8','Accuracy+11','Attack+19',}}
 gear.herculean_nuke_legs = {name="Herculean Trousers",augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Damage taken-2%','"Mag.Atk.Bns."+14',}}
 gear.herculean_acc_feet = {name="Herculean Boots",augments={'Accuracy+25 Attack+25','Crit. hit damage +1%','DEX+10','Accuracy+14','Attack+1',}}
 gear.herculean_ta_feet = {name="Herculean Boots",augments={'Accuracy+19 Attack+19','"Triple Atk."+4','DEX+5','Accuracy+8','Attack+11',}}
@@ -59,7 +60,8 @@ gear.merlinic_treasure_feet = {name="Merlinic Crackows",augments={'Accuracy+5','
 gear.merlinic_refresh_feet = {name="Merlinic Crackows",augments={'Pet: DEX+7','Pet: Mag. Acc.+7','"Refresh"+2','Accuracy+20 Attack+20',}}
 gear.merlinic_occult_feet = {name="Merlinic Crackows",augments={'"Occult Acumen"+11','INT+8','Mag. Acc.+4',}}
 
-gear.odyssean_wsd_hands = { name="Odyssean Gauntlets",augments={'Accuracy+26','Weapon skill damage +4%','STR+6','Attack+14',}}
+gear.odyssean_wsd_hands = { name="Odyssean Gauntlets",augments={'Weapon skill damage +4%','VIT+15','Attack+12',}}
+gear.odyssean_wsd_head = { name="Odyssean Gauntlets",augments={'Weapon skill damage +4%','VIT+15','Attack+12',}}
 gear.odyssean_stp_legs = {name="Odyssean Cuisses",augments={'Accuracy+28','"Store TP"+6','DEX+9',}}
 gear.odyssean_fc_legs = {name="Odyssean Cuisses",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+12',}}
 

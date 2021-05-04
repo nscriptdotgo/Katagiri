@@ -11,9 +11,10 @@ function user_job_setup()
 	state.CompensatorMode:options('Always','300','1000','Never')
 
     autows = 'Savage Blade'
+    rangedautows = 'Last Stand'
     autowstp = 1750
-    gear.RAbullet = "Decimating Bullet"
-    gear.WSbullet = "Decimating Bullet"
+    gear.RAbullet = "Bronze Bullet"
+    gear.WSbullet = "Bronze Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
@@ -175,17 +176,17 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = {
         ammo=gear.WSbullet,
-        head=gear.herculean_wsd_head,
+        head="Lilitu Headpiece",
         neck="Caro Necklace",
         ear1="Moonshade Earring",
         ear2="Ishvara Earring",
         body="Meg. Cuirie +2",
         hands="Meg. Gloves +2",
-        ring1="Karieyh Ring",
+        ring1="Rajas Ring",
         ring2="Rufescent Ring",
         dabsaack=gear.str_wsd_jse_back,
         waist="Soil Belt",
-        legs="Meg. Chausses +2",
+        legs=gear.herculean_wsd_str_legs,
         feet="Herculean Boots"
     }
 
@@ -340,7 +341,7 @@ function init_gear_sets()
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Reiki Yotai"}
 
 	-- Weapons sets
-	sets.weapons.Default = {main="Naegling",sub="Kaja Knife",range="Doomsday"}
+	sets.weapons.Default = {main="Naegling",sub="Kaja Knife",range="Gun of Trials"}
     sets.weapons.Proc = {main="Excalipoor"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Blurred Knife +1",range="Fomalhaut"}
 	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}
@@ -400,7 +401,8 @@ function init_gear_sets()
 		back=gear.str_wsd_jse_back,
         waist="Windbuffet Belt +1",
         -- legs="Samnuha Tights",
-        feet=gear.herculean_ta_feet
+        -- feet=gear.herculean_ta_feet
+        feet="Carmine Greaves"
     }
     
     sets.engaged.DW.Acc = {

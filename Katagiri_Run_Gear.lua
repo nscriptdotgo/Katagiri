@@ -117,7 +117,7 @@ function init_gear_sets()
 		--hands="Regal Gauntlets", --205
         legs="Futhark Trousers +2", --87
 		feet="Runeist Bottes +1", --64
-        neck="Futhark Torque +1", --6/6
+        neck="Unmoving Collar +1", --6/6
         ear1="Odnowa Earring +1", --100
         ear2="Ethereal Earring", --100
 		--ear1="Tuisto Earring",
@@ -134,14 +134,14 @@ function init_gear_sets()
 	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
-    sets.precast.JA['Vallation'].DT = set_combine(sets.Enmity.DT,{body="Runeist's Coat +3", legs="Futhark Trousers +2"})
+    sets.precast.JA['Vallation'].DT = set_combine(sets.Enmity.DT,{body="Runeist's Coat +2", legs="Futhark Trousers +2"})
     sets.precast.JA['Valiance'].DT = sets.precast.JA['Vallation'].DT
-    sets.precast.JA['Pflug'].DT = set_combine(sets.Enmity.DT,{feet="Runeist's Boots +3"})
+    sets.precast.JA['Pflug'].DT = set_combine(sets.Enmity.DT,{feet="Runeist's Boots +1"})
     sets.precast.JA['Battuta'].DT = set_combine(sets.Enmity.DT,{head="Futhark Bandeau +1"})
-    sets.precast.JA['Liement'].DT = set_combine(sets.Enmity.DT,{body="Futhark Coat +1"})
-    sets.precast.JA['Gambit'].DT = set_combine(sets.Enmity.DT,{hands="Runeist's Mitons +3"})
+    sets.precast.JA['Liement'].DT = set_combine(sets.Enmity.DT,{body="Futhark Coat +3"})
+    sets.precast.JA['Gambit'].DT = set_combine(sets.Enmity.DT,{hands="Runeist's Mitons +2"})
     sets.precast.JA['Rayke'].DT = set_combine(sets.Enmity.DT,{feet="Futhark Boots +1"})
-    sets.precast.JA['Elemental Sforzo'].DT = set_combine(sets.Enmity.DT,{body="Futhark Coat +1"})
+    sets.precast.JA['Elemental Sforzo'].DT = set_combine(sets.Enmity.DT,{body="Futhark Coat +3"})
     sets.precast.JA['Swordplay'].DT = set_combine(sets.Enmity.DT,{hands="Futhark Mitons +1"})
     sets.precast.JA['Embolden'].DT = set_combine(sets.Enmity.DT,{})
     sets.precast.JA['One for All'].DT = set_combine(sets.Enmity.DT,{})
@@ -467,7 +467,7 @@ function init_gear_sets()
 		neck="Futhark Torque +1",
 		waist="Flume Belt +1",
 		left_ear="Odnowa Earring +1",
-		right_ear="Ethereal Earring",
+		right_ear="Etiolation Earring",
 		left_ring="Moonbeam Ring",
 		right_ring="Defending Ring",
 		back="Ogma's cape",

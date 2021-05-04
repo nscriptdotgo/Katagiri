@@ -166,7 +166,7 @@ function init_gear_sets()
         neck="Sanctity Necklace",
         head="Ratri Sallet +1",
         ear1="Etiolation Earring",
-        -- ear2="Infused Earring",
+        ear2="Infused Earring",
         body="Heathen's Cuirass +1",
         --body="Ratri Breastplate +1",
         -- hands="Ratri Gadlings +1",
@@ -220,14 +220,14 @@ function init_gear_sets()
 	
 	sets.Self_Healing = {
         -- neck="Phalaina Locket",
-        -- hands="Buremte Gloves",
-        -- ring2="Kunaji Ring",
+        hands="Buremte Gloves",
+        ring2="Kunaji Ring",
         waist="Gishdubar Sash"
     }
 	sets.Cure_Received = {
         -- neck="Phalaina Locket",
-        -- hands="Buremte Gloves",
-        -- ring2="Kunaji Ring",
+        hands="Buremte Gloves",
+        ring2="Kunaji Ring",
         waist="Gishdubar Sash"
     }
 	sets.Self_Refresh = {waist="Gishdubar Sash"}
@@ -277,6 +277,7 @@ function init_gear_sets()
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
         ammo="Brigantia Pebble",
         head=Odyssean.Head.WSD,
+        hands=gear.odyssean_wsd_hands,
         ring2="Niqmaddu Ring",
         neck="Light Gorget",
         waist="Light Belt",
@@ -415,20 +416,20 @@ function init_gear_sets()
 		neck="Lissome Necklace",
 		waist="Ioskeha Belt",
 		ear1="Cessance Earring",
-		ear2="Brutal Earring",
+		ear2="Telos Earring",
 		ring1="Niqmaddu Ring",
 		ring2="Petrov Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
     }
     sets.engaged.SomeAcc = set_combine(sets.engaged, {
-        -- ear2="Telos Earring",
+        ear2="Telos Earring",
         -- ring2="Regal Ring",
         body=Valorous.Body.STP
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
         -- ammo="Hasty Pinion +1",
         ear1="Cessance Earring",
-        -- ear2="Telos Earring",
+        ear2="Telos Earring",
         body="Flamma Korazin +1",
         back=Ankou.STP,
     })
