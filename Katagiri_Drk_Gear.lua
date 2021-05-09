@@ -17,10 +17,18 @@ function user_job_setup()
 	send_command('bind !` input /ja "Seigan" <me>')
     send_command('bind @e input /ms "Endark II" <me>')
 	send_command('bind @d input /ma "Dread Spikes" <me>')
+    send_command('bind @[ input /ja "Dark Seal" <me>')
+    send_command('bind @] input /ja "Nether Void" <me>')
+    send_command('bind @q input /ma "Stun" <t>')
 	send_command('bind @` gs c cycle SkillchainMode')
 
     autows = 'Torcleaver'
     autowstp = 1750
+
+    gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+    gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
+    gear.wsd_str_jse_back = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
 	
 	select_default_macro_book()
 end
@@ -32,10 +40,6 @@ function init_gear_sets()
 	Ankou = {}
     Ankou.FC  = { name="Ankou's Mantle", augments={'"Fast Cast"+10',}}
     Ankou.STP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}}
-    --Ankou.DA  = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-	Ankou.DA  = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
-    Ankou.WSD = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-    Ankou.VIT = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 
 	--- Odyssean ---
 	Odyssean = {}
@@ -78,10 +82,10 @@ function init_gear_sets()
 	sets.precast.JA['Arcane Circle'] = {}
     sets.precast.JA['Souleater']    = {head="Ignominy burgeonet +1"}
     sets.precast.JA['Weapon Bash']   = {hands="Ignominy Gauntlets +1"}
-	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard"}
+	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard +1"}
     sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +1"}
     sets.precast.JA['Dark Seal']    = {head="Fallen's burgeonet +1"}
-	sets.precast.JA['Last Resort'] = {back=Ankou.WSD}
+	sets.precast.JA['Last Resort'] = {back=gear.wsd_str_jse_back}
                    
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
@@ -102,7 +106,7 @@ function init_gear_sets()
         body=Odyssean.Body.FC,
         ear1="Etiolation Earring",
         ear2="Loquacious Earring",
-        -- hands="Leyline Gloves",
+        hands="Leyline Gloves",
         -- ring1="Kishar Ring",
         -- ring2="Weatherspoon Ring", -- 10 macc
         legs=Odyssean.Legs.FC,
@@ -143,7 +147,7 @@ function init_gear_sets()
         ring1="Evanescence Ring", -- 10
         ring2="Archon Ring", 
         back="Niht Mantle", -- 10
-        legs="Heathen's Flanchard",  -- 18 + 39macc
+        legs="Heathen's Flanchard +1",  -- 18 + 39macc
         --feet="Ratri Sollerets +1" -- macc 33
     }
            
@@ -165,14 +169,14 @@ function init_gear_sets()
         ammo="Staunch Tathlum",
         neck="Sanctity Necklace",
         head="Ratri Sallet +1",
-        ear1="Etiolation Earring",
-        ear2="Infused Earring",
+        ear1="Tuisto Earring",
+        ear2="Odnowa Earring +1",
         body="Heathen's Cuirass +1",
         --body="Ratri Breastplate +1",
         -- hands="Ratri Gadlings +1",
         -- back="Trepidity Mantle",
-        -- ring1="Regal Ring", -- matk 4
-        -- ring2="Regal Ring", -- matk 4
+        ring1="Moonbeam Ring", -- matk 4
+        ring2="Gelatinous Ring +1", -- matk 4
         waist="Oneiros Belt",
         -- legs="Ratri Cuisses +1",
         feet="Amm Greaves"
@@ -244,7 +248,7 @@ function init_gear_sets()
 		hands=Odyssean.Hands.WSD,
         ring1="Karieyh Ring",
         ring2="Titan Ring",
-        back=Ankou.VIT,
+        back=gear.wsd_vit_jse_back,
         waist="Light Belt",
         legs=Odyssean.Legs.WS,
         feet="Sulevia's Leggings +2"
@@ -281,7 +285,7 @@ function init_gear_sets()
         ring2="Niqmaddu Ring",
         neck="Light Gorget",
         waist="Light Belt",
-        back=Ankou.VIT
+        back=gear.wsd_vit_jse_back
     })
 
 	sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
@@ -360,7 +364,10 @@ function init_gear_sets()
 		body="Jumalik Mail",hands="Sulev. Gauntlets +2",ring1="Defending Ring",ring2="Dark Ring",
 		back="Shadow Mantle",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Amm Greaves"}
 
-	sets.idle.Weak = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
+	sets.idle.Weak = set_combine(sets.idle, {
+        head="Twilight Helm",
+        body="Twilight Mail"
+    })
 		
 	sets.idle.Reraise = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
            
@@ -447,12 +454,12 @@ function init_gear_sets()
         body="Sulevia's Plate. +1",
         hands="Sulev. Gauntlets +2",
         legs="Sulevi. Cuisses +1",
-        feet="Amm Greaves",
+        feet="Flamma Gambieras +2",
         neck="Twilight Torque",
         waist="Flume Belt +1",
-        ear1="Odnowa Earring +1",
-        ear2="Ethereal Earring",
-        ring1="Moonbeam Ring",
+        ear1="Brutal Earring",
+        ear2="Telos Earring",
+        ring1="Niqmaddu Ring",
         ring2="Defending Ring",
         back="Shadow Mantle", 
     }

@@ -341,7 +341,7 @@ function init_gear_sets()
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Reiki Yotai"}
 
 	-- Weapons sets
-	sets.weapons.Default = {main="Naegling",sub="Kaja Knife",range="Gun of Trials"}
+	sets.weapons.Default = {main="Naegling",sub="Kaja Knife",range="Doomsday"}
     sets.weapons.Proc = {main="Excalipoor"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Blurred Knife +1",range="Fomalhaut"}
 	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}

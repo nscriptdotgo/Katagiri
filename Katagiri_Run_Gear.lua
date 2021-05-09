@@ -119,8 +119,8 @@ function init_gear_sets()
 		feet="Runeist Bottes +1", --64
         neck="Unmoving Collar +1", --6/6
         ear1="Odnowa Earring +1", --100
-        ear2="Ethereal Earring", --100
-		--ear1="Tuisto Earring",
+        -- ear2="Ethereal Earring", --100
+		ear2="Tuisto Earring",
 		ring2="Gelatinous Ring +1", --70
         ring1="Moonbeam Ring", --110
         back="Ogma's cape", --6/6
@@ -217,7 +217,7 @@ function init_gear_sets()
 		body="Taeon Tabard",
 		hands="Taeon Gloves",
 		-- ring1="Lebeche Ring",
-		ring2="Kishar Ring",
+		-- ring2="Kishar Ring",
         -- back="Moonbeam Cape",
 		waist="Audumbla Sash",
 		legs="Ayanmo Cosciales +2",
@@ -231,13 +231,13 @@ function init_gear_sets()
         head="Rune. Bandeau +2",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
-		-- ear2="Tuisto Earring",
+		ear2="Tuisto Earring",
         body="Runeist's Coat +2",
 		-- hands="Leyline Gloves",
 		ring1="Gelatinous Ring +1",
 		ring2="Moonbeam Ring",
         -- back="Moonbeam Cape",
-		-- waist="Audumbla Sash",
+		waist="Audumbla Sash",
 		legs="Eri. Leg Guards +1",
 		feet="Carmine Greaves"
 	}
@@ -598,7 +598,7 @@ function init_gear_sets()
         head="Erilaz Galea +1",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
-		ear2="Ethereal Earring",
+		ear2="Tuisto Earring",
         body="Runeist's Coat +2",
 		hands="Turms Mittens +1",
 		ring1="Moonbeam Ring",
@@ -608,10 +608,23 @@ function init_gear_sets()
 		legs="Erilaz Leg Guards +1",
 		feet="Erilaz Greaves +1"
 	}
-	-- sets.defense.MEVA_HP = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-    --     head="Erilaz Galea +1",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
-    --     body="Runeist's Coat +3",hands="Erilaz Gauntlets +1",ring1="Gelatinous Ring +1",ring2="Moonbeam Ring",
-    --     back="Moonbeam Cape",waist="Engraved Belt",legs="Rune. Trousers +3",feet="Erilaz Greaves +1"}
+	sets.defense.MEVA_HP = {
+		-- main="Aettir",
+		-- sub="Utu Grip",
+		ammo="Staunch Tathlum",
+        head="Erilaz Galea +1",
+		neck="Warder's Charm",
+		ear1="Odnowa Earring +1",
+		-- ear2="Sanare Earring",
+        body="Runeist's Coat +2",
+		hands="Erilaz Gauntlets +1",
+		ring1="Gelatinous Ring +1",
+		ring2="Moonbeam Ring",
+        back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+		waist="Flume Belt +1",
+		legs="Rune. Trousers +1",
+		feet="Erilaz Greaves +1"
+	}
 		
 	-- sets.defense.Death = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
     --     head="Erilaz Galea +1",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
