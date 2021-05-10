@@ -13,8 +13,8 @@ function user_job_setup()
     autows = 'Savage Blade'
     rangedautows = 'Last Stand'
     autowstp = 1750
-    gear.RAbullet = "Bronze Bullet"
-    gear.WSbullet = "Bronze Bullet"
+    gear.RAbullet = "Decimating Bullet"
+    gear.WSbullet = "Decimating Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
