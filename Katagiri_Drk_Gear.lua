@@ -267,10 +267,10 @@ function init_gear_sets()
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
     sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
+        ammo="Knobkierrie",
         head=Odyssean.Head.WSD,
         hands=Odyssean.Hands.WSD,
-        ear1="Brutal Earring",
-        ring1="Karieyh Ring",
+        ring1="Niqmaddu Ring",
         ring2="Rufescent Ring",
         neck="Caro Necklace",
         waist="Grunfeld Rope",
