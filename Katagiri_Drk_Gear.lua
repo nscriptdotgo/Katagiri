@@ -166,9 +166,9 @@ function init_gear_sets()
     })
 		   
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
-        ammo="Staunch Tathlum",
+        ammo="Egoist's Tathlum",
         neck="Sanctity Necklace",
-        head="Ratri Sallet +1",
+        -- head="Ratri Sallet +1",
         ear1="Tuisto Earring",
         ear2="Odnowa Earring +1",
         body="Heathen's Cuirass +1",
@@ -185,9 +185,8 @@ function init_gear_sets()
         head="Ignominy Burgonet +1", -- 17
         neck="Sanctity Necklace",
         back="Niht Mantle",
-        hands="Flamma Manopolas +2",
+        hands="Pavor Gauntlets",
         back="Chuparrosa Mantle",
-        -- hands="Pavor Gauntlets",
         ring1="Evanescence Ring", -- 10
         ring2="Archon Ring"
     })
@@ -247,7 +246,7 @@ function init_gear_sets()
         body=Valorous.Body.WSD,
 		hands=Odyssean.Hands.WSD,
         ring1="Karieyh Ring",
-        ring2="Titan Ring",
+        ring2="Niqmaddu Ring",
         back=gear.wsd_vit_jse_back,
         waist="Light Belt",
         legs=Odyssean.Legs.WS,
@@ -269,7 +268,6 @@ function init_gear_sets()
     sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
         ammo="Knobkierrie",
         head=Odyssean.Head.WSD,
-        hands=Odyssean.Hands.WSD,
         ring1="Niqmaddu Ring",
         ring2="Rufescent Ring",
         neck="Caro Necklace",
@@ -449,19 +447,19 @@ function init_gear_sets()
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
 		back="Ankou's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
     sets.engaged.DTLite = {
-        ammo="Seething Bomblet+1",
+        ammo="Ginsen",
         head="Sulevia's Mask +1",
-        body="Sulevia's Plate. +1",
-        hands="Sulev. Gauntlets +2",
-        legs="Sulevi. Cuisses +1",
-        feet="Flamma Gambieras +2",
-        neck="Twilight Torque",
-        waist="Flume Belt +1",
+        neck="Loricate Torque +1",
         ear1="Brutal Earring",
-        ear2="Telos Earring",
-        ring1="Niqmaddu Ring",
+        ear2="Cessance Earring",
+        body="Valorous Mail",
+        hands="Sulev. Gauntlets +2",
+        ring1="Moonbeam Ring",
         ring2="Defending Ring",
-        back="Shadow Mantle", 
+        back=gear.da_jse_back,
+        waist="Ioskeha Belt",
+        legs="Sulev. Cuisses +2",
+        feet="Flam. Gambieras +2"
     }
 --Example sets:
 --[[

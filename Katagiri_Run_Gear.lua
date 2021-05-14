@@ -504,7 +504,7 @@ function init_gear_sets()
         back="Shadow Mantle",
 		waist="Flume Belt +1",
 		legs="Carmine Cuisses +1",
-		feet="Erilaz Greaves +1"
+		feet="Hippo. Socks"
 	}
 
 	sets.idle.Weak = {
