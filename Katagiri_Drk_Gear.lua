@@ -23,7 +23,7 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 
     autows = 'Torcleaver'
-    autowstp = 1750
+    autowstp = 1000
 
     gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
     gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
@@ -246,8 +246,8 @@ function init_gear_sets()
         ear2="Moonshade Earring",
         body=Valorous.Body.WSD,
 		hands=Odyssean.Hands.WSD,
-        ring1="Karieyh Ring",
-        ring2="Titan Ring",
+        ring1="Titan Ring",
+        ring2="Karieyh Ring",
         back=gear.wsd_vit_jse_back,
         waist="Light Belt",
         legs=Odyssean.Legs.WS,
@@ -279,10 +279,9 @@ function init_gear_sets()
     })
 	
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
-        ammo="Brigantia Pebble",
         head=Odyssean.Head.WSD,
         hands=gear.odyssean_wsd_hands,
-        ring2="Niqmaddu Ring",
+        ring1="Niqmaddu Ring",
         neck="Light Gorget",
         waist="Light Belt",
         back=gear.wsd_vit_jse_back
