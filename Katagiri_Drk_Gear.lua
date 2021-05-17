@@ -140,6 +140,7 @@ function init_gear_sets()
         head="Pixie Hairpin +1", -- 19
         neck="Deceiver's Torque", -- 10 dark + 17 macc
         --ear1="Malignance Earring",
+        ear1="Mani Earring",
         ear2="Dark Earring", -- 3
         body="Flamma Korazin +1",
         hands="Fallen Finger Gauntlets +1",
@@ -273,7 +274,7 @@ function init_gear_sets()
         neck="Caro Necklace",
         waist="Grunfeld Rope",
         legs="Sulevia Cuisses +1",
-        feet="Sulevia Leggings +2"
+        feet="Ratri Sollerets"
     })
 	
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
