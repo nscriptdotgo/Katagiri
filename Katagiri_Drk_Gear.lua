@@ -148,8 +148,8 @@ function init_gear_sets()
         ring2="Archon Ring", 
         back="Niht Mantle", -- 10
         legs="Heathen's Flanchard +1",  -- 18 + 39macc
-        --feet="Ratri Sollerets +1" -- macc 33
-        feet="Flamma Gambieras +2" -- macc 33
+        feet="Ratri Sollerets" -- macc 33
+        -- feet="Flamma Gambieras +2" -- macc 33
     }
            
 	sets.midcast['Enfeebling Magic'] = set_combine(sets.midcast['Dark Magic'], {
