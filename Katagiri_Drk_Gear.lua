@@ -141,14 +141,15 @@ function init_gear_sets()
         neck="Deceiver's Torque", -- 10 dark + 17 macc
         --ear1="Malignance Earring",
         ear2="Dark Earring", -- 3
-        body="Fallen's Cuirass +1",
+        body="Flamma Korazin +1",
         hands="Fallen Finger Gauntlets +1",
-        --waist="Casso Sash", -- 5
+        waist="Eschan Stone", -- 5
         ring1="Evanescence Ring", -- 10
         ring2="Archon Ring", 
         back="Niht Mantle", -- 10
         legs="Heathen's Flanchard +1",  -- 18 + 39macc
         --feet="Ratri Sollerets +1" -- macc 33
+        feet="Flamma Gambieras +2" -- macc 33
     }
            
 	sets.midcast['Enfeebling Magic'] = set_combine(sets.midcast['Dark Magic'], {
@@ -182,9 +183,8 @@ function init_gear_sets()
         feet="Amm Greaves"
     })
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {
-        head="Ignominy Burgonet +1", -- 17
+        head="Flamma Zucchetto +2", -- 17
         neck="Sanctity Necklace",
-        back="Niht Mantle",
         hands="Pavor Gauntlets",
         back="Chuparrosa Mantle",
         ring1="Evanescence Ring", -- 10
