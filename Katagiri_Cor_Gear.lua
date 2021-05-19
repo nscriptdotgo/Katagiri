@@ -12,7 +12,7 @@ function user_job_setup()
 
     autows = 'Savage Blade'
     rangedautows = 'Last Stand'
-    autowstp = 1750
+    autowstp = 1000
     gear.RAbullet = "Decimating Bullet"
     gear.WSbullet = "Decimating Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
@@ -406,9 +406,23 @@ function init_gear_sets()
     }
     
     sets.engaged.DW.Acc = {
-		head="Carmine Mask +1",neck="Combatant's Torque",ear1="Digni. Earring",ear2="Telos Earring",
-		body="Meg. Cuirie +1",hands="Floral Gauntlets",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-		back=gear.tp_jse_back,waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Meg. Jam. +1"}
+		--head="Carmine Mask +1",neck="Combatant's Torque",ear1="Digni. Earring",ear2="Telos Earring",
+		--body="Meg. Cuirie +1",hands="Floral Gauntlets",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
+		--back=gear.tp_jse_back,waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Meg. Jam. +1"
+        head="Meghanada Visor +1",
+        neck="Lissome Necklace",
+        ear1="Suppanomimi",
+        ear2="Brutal Earring",
+		body="Adhemar Jacket +1",
+        hands="Adhemar Wrist. +1",
+        ring1="Epona's Ring",
+        ring2="Petrov Ring",
+		back=gear.str_wsd_jse_back,
+        waist="Kentarch Belt +1",
+        legs="Carmine Cuisses +1",
+        -- feet=gear.herculean_ta_feet
+        feet="Carmine Greaves"
+    }
 		
     sets.engaged.DW.DT = {
         head="Meghanada Visor +1",neck="Twilight Torque",ear1="Suppanomimi",ear2="Brutal Earring",
