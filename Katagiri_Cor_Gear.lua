@@ -411,8 +411,8 @@ function init_gear_sets()
 		--back=gear.tp_jse_back,waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Meg. Jam. +1"
         head="Meghanada Visor +1",
         neck="Lissome Necklace",
-        ear1="Suppanomimi",
-        ear2="Brutal Earring",
+        ear1="Cessance Earring",
+        ear2="Telos Earring",
 		body="Adhemar Jacket +1",
         hands="Adhemar Wrist. +1",
         ring1="Epona's Ring",
