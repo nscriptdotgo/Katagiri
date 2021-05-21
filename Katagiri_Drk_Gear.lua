@@ -143,7 +143,7 @@ function init_gear_sets()
         ear1="Mani Earring",
         ear2="Dark Earring", -- 3
         body="Flamma Korazin +1",
-        hands="Fallen Finger Gauntlets +1",
+        hands="Fallen's Finger Gauntlets +1",
         waist="Eschan Stone", -- 5
         ring1="Evanescence Ring", -- 10
         ring2="Archon Ring", 
@@ -619,24 +619,24 @@ function check_trust()
 			if party.p5 == nil then
 				local spell_recasts = windower.ffxi.get_spell_recasts()
 			
-				if spell_recasts[980] < spell_latency and not have_trust("Yoran-Oran") then
-					windower.send_command('input /ma "Sylvie (UC)" <me>')
+				if spell_recasts[911] < spell_latency and not have_trust("Joachim") then
+					windower.send_command('input /ma "Joachim" <me>')
 					tickdelay = os.clock() + 3
 					return true
 				elseif spell_recasts[952] < spell_latency and not have_trust("Koru-Moru") then
-					windower.send_command('input /ma "Arciela II" <me>')
+					windower.send_command('input /ma "Koru-Moru" <me>')
 					tickdelay = os.clock() + 3
 					return true
-				elseif spell_recasts[979] < spell_latency and not have_trust("Selh'teus") then
+				elseif spell_recasts[914] < spell_latency and not have_trust("Ulmia") then
 					windower.send_command('input /ma "Ulmia" <me>')
 					tickdelay = os.clock() + 3
 					return true
 				elseif spell_recasts[967] < spell_latency and not have_trust("Qultada") then
-					windower.send_command('input /ma "Joachim" <me>')
+					windower.send_command('input /ma "Qultada" <me>')
 					tickdelay = os.clock() + 3
 					return true
-				elseif spell_recasts[914] < spell_latency and not have_trust("Ulmia") then
-					windower.send_command('input /ma "King of Hearts" <me>')
+				elseif spell_recasts[898] < spell_latency and not have_trust("Kupipi") then
+					windower.send_command('input /ma "Kupipi" <me>')
 					tickdelay = os.clock() + 3
 					return true
 				else
