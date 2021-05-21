@@ -454,12 +454,12 @@ function check_trust()
 			if party.p5 == nil then
 				local spell_recasts = windower.ffxi.get_spell_recasts()
 
-				if spell_recasts[993] < spell_latency and not have_trust("ArkEV") then
-					windower.chat.input('/ma "AAEV" <me>')
+				if spell_recasts[993] < spell_latency and not have_trust("Joachim") then
+					windower.chat.input('/ma "Joachim" <me>')
 					tickdelay = os.clock() + 3
 					return true
-				elseif spell_recasts[955] < spell_latency and not have_trust("Apururu") then
-					windower.chat.input('/ma "Apururu (UC)" <me>')
+				elseif spell_recasts[955] < spell_latency and not have_trust("Kupipi") then
+					windower.chat.input('/ma "Kupipi" <me>')
 					tickdelay = os.clock() + 3
 					return true
 				elseif spell_recasts[952] < spell_latency and not have_trust("Koru-Moru") then
