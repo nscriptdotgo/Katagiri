@@ -182,7 +182,7 @@ function init_gear_sets()
         ear2="Ishvara Earring",
         body="Meg. Cuirie +2",
         hands="Meg. Gloves +2",
-        ring1="Rajas Ring",
+        ring1="Apate Ring",
         ring2="Rufescent Ring",
         dabsaack=gear.str_wsd_jse_back,
         waist="Soil Belt",

@@ -7,7 +7,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Montante','Anguta','Zulfiqar','Cronus')
+	state.Weapons:options('Montante','Cronus')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -28,6 +28,7 @@ function user_job_setup()
     gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
     gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
     gear.wsd_str_jse_back = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+    gear.fc_jse_back = { name="Ankou's Mantle", augments={'"Fast Cast"+10',}}
 
 	
 	select_default_macro_book()
@@ -104,13 +105,13 @@ function init_gear_sets()
         head="Fallen's Burgonet +1",
         neck="Voltsurge Torque",
         body=Odyssean.Body.FC,
-        ear1="Etiolation Earring",
+        ear1="Malignance Earring",
         ear2="Loquacious Earring",
         hands="Leyline Gloves",
         -- ring1="Kishar Ring",
         -- ring2="Weatherspoon Ring", -- 10 macc
         legs=Odyssean.Legs.FC,
-        -- back=Ankou.FC,
+        back=gear.fc_jse_back,
         waist="Flume Belt +1",
         feet="Carmine Greaves"
     }
@@ -579,10 +580,10 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.Montante = {main="Montante +1",sub="Utu Grip"}
-    sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
+	sets.weapons.Montante = {main="Montante +1",sub="Gracile Grip"}
+    -- sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
     sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
-	sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
+	-- sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
 	
     end
 	
