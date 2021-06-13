@@ -143,7 +143,7 @@ function init_gear_sets()
         --ear1="Malignance Earring",
         ear1="Mani Earring",
         ear2="Dark Earring", -- 3
-        body="Flamma Korazin +1",
+        body="Flamma Korazin +2",
         hands="Fallen's Finger Gauntlets +1",
         waist="Eschan Stone", -- 5
         ring1="Evanescence Ring", -- 10
@@ -436,7 +436,7 @@ function init_gear_sets()
         -- ammo="Hasty Pinion +1",
         ear1="Cessance Earring",
         ear2="Telos Earring",
-        body="Flamma Korazin +1",
+        body="Flamma Korazin +2",
         back=Ankou.STP,
     })
     sets.engaged.FullAcc = {ammo="Aurgelmir Orb +1",

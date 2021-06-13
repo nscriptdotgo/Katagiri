@@ -14,8 +14,10 @@ function user_job_setup()
 
 	gear.enmity_jse_back = { name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}}
 	gear.stp_jse_back = { name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
-	gear.da_jse_back = {name="Ogma's cape",augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	gear.da_jse_back = {name="Ogma's cape",augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10', 'Damage taken-5%',}}
 	gear.dex_wsd_jse_back = {name="Ogma's cape",augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
+	gear.parry_jse_back = back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Parrying rate+5%',}},
+
 
 	-- Additional local binds
 	send_command('bind !` gs c SubJobEnmity')
@@ -300,12 +302,13 @@ function init_gear_sets()
 		head="Adhemar Bonnet +1",
 		hands="Adhemar Wristbands +1",
 		neck="Light Gorget",
-		feet="Herculean Boots",
+		feet="Lustratio Leggings +1",
 		waist="Light Belt",
 		ear1="Sherida Earring",
 		ear2="Moonshade Earring",
 		ring1="Niqmaddu Ring",
-		ring2="Rajas Ring"
+		ring2="Rajas Ring",
+		back=gear.da_jse_back
 
 	})
     sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc,{})
@@ -382,7 +385,7 @@ function init_gear_sets()
 		-- ear1="Andoaa Earring",
 		ear2="Mimir Earring",
 		hands="Runeist's Mitons +2",
-		-- back="Merciful Cape",
+		back="Merciful Cape",
 		-- waist="Olympus Sash",
 		legs="Futhark Trousers +2"
 	})
@@ -699,7 +702,7 @@ function init_gear_sets()
 		-- main={ name="Aettir", augments={'Accuracy+70','Mag. Evasion+50','Weapon skill damage +10%',}},
 		-- sub="Refined Grip +1",
 		ammo="Staunch Tathlum",
-		head="Ayanmo Zucchetto +1",
+		head="Ayanmo Zucchetto +2",
 		body="Ayanmo Corazza +2",
 		hands="Turms Mittens +1",
 		legs="Meg. Chausses +2",
@@ -789,7 +792,7 @@ function init_gear_sets()
     }
     sets.engaged.SomeAcc.Tank = set_combine(sets.engaged.Tank, {
         -- ammo="Yamarang",
-		head="Ayanmo Zucchetto +1",
+		head="Ayanmo Zucchetto +2",
     })
 	sets.engaged.Acc.Tank = set_combine(sets.engaged.Tank, {
 		legs="Meghanada Chausses +2", --+29
@@ -815,7 +818,10 @@ function init_gear_sets()
 		waist="Gishdubar Sash"
 	})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
-	sets.buff.Battuta = {hands="Turms Mittens +1"}
+	sets.buff.Battuta = {
+		hands="Turms Mittens +1",
+		back=gear.parry_jse_back
+	}
 	sets.buff.Embolden = {back="Evasionist's Cape"}
 	
 end

@@ -219,7 +219,7 @@ function init_gear_sets()
     sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",neck="Baetyl Pendant",ear1="Moonshade Earring",ear2="Friomisi Earring",
         body="Laksa. Frac +3",hands="Carmine Fin. Ga. +1",ring1="Archon Ring",ring2="Dingir Ring",
-        back=gear.magic_wsd_jse_back,waist="Eschan Stone",legs="Laksa. Trews +3",feet="Lanun Bottes +3"}
+        back=gear.magic_wsd_jse_back,waist="Svelt. fGouriz +1",legs="Laksa. Trews +3",feet="Lanun Bottes +3"}
 
     sets.precast.WS['Aeolian Edge'] = {ammo="Animikii Bullet",
         head=gear.herculean_nuke_head,neck="Sanctity Necklace",ear1="Crematio Earring",ear2="Friomisi Earring",
