@@ -16,7 +16,7 @@ function user_job_setup()
 	gear.stp_jse_back = { name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
 	gear.da_jse_back = {name="Ogma's cape",augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10', 'Damage taken-5%',}}
 	gear.dex_wsd_jse_back = {name="Ogma's cape",augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
-	gear.parry_jse_back = back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Parrying rate+5%',}},
+	gear.parry_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Parrying rate+5%',}}
 
 
 	-- Additional local binds
