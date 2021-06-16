@@ -583,6 +583,7 @@ function init_gear_sets()
 	sets.weapons.Montante = {main="Montante +1",sub="Gracile Grip"}
     -- sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
     sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
+    sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Gracile Grip"}
 	-- sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
 	
     end
