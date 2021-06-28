@@ -9,7 +9,7 @@ function user_job_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
-	state.Weapons:options('Trishula')
+	state.Weapons:options('Trishula','None')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
     select_default_macro_book()
@@ -31,10 +31,21 @@ function init_gear_sets()
 	-- Precast Sets
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Angon = {ammo="Angon"} --hands="Ptero. Fin. G. +1"
-	sets.precast.JA.Jump = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Ganesha's Mala",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Windbuffet Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+	sets.precast.JA.Jump = {
+		ammo="Aurgelmir Orb +1",
+		head="Flam. Zucchetto +2",
+		neck="Ganesha's Mala",
+		ear1="Brutal Earring",
+		ear2="Sherida Earring",
+		body=gear.valorous_wsd_body,
+		hands=gear.valorous_acc_hands,
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back="Brigantia's Mantle",
+		waist="Windbuffet Belt +1",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2"
+	}
 	sets.precast.JA['Ancient Circle'] = {} --legs="Vishap Brais"
 	sets.precast.JA['High Jump'] = {ammo="Aurgelmir Orb +1",
 		head="Flam. Zucchetto +2",neck="Ganesha's Mala",ear1="Brutal Earring",ear2="Sherida Earring",
@@ -94,9 +105,19 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	
 	sets.precast.WS = {ammo="Knobkierrie",
-		head="Flam. Zucchetto +2",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands="Sulev. Gauntlets +2",ring1="Regal Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Fotia Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+		head="Flam. Zucchetto +2",
+		neck="Dgn. Collar +1",
+		ear1="Moonshade Earring",
+		ear2="Sherida Earring",
+		body=gear.valorous_wsd_body,
+		hands="Sulev. Gauntlets +2",
+		ring1="Rajas Ring",
+		ring2="Niqmaddu Ring",
+		back="Brigantia's Mantle",
+		waist="Shadow Belt",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2"
+	}
 		
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {neck="Shulmanu Collar"})
@@ -122,10 +143,21 @@ function init_gear_sets()
 	sets.resting = {}
 
 	-- Idle sets
-	sets.idle = {ammo="Staunch Tathlum +1",
-		head="Loess Barbuta +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Tartarus Platemail",hands="Sulev. Gauntlets +2",ring1="Defending Ring",ring2="Dark Ring",
-		back="Shadow Mantle",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Amm Greaves"}
+	sets.idle = {
+		ammo="Staunch Tathlum",
+		head="Sulevia's Mask +1",
+		neck="Loricate Torque +1",
+		ear1="Odnowa Earring +1",
+		ear2="Ethereal Earring",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		ring1="Defending Ring",
+		ring2="Gelatinous Ring +1",
+		back="Shadow Mantle",
+		waist="Flume Belt +1",
+		legs="Carmine Cuisses +1",
+		feet="Amm Greaves"
+	}
 		
 	sets.idle.Refresh = {ammo="Staunch Tathlum +1",
 		head="Jumalik Helm",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
@@ -168,6 +200,12 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
+	sets.weapons.Reienkyo = {main="Reienkyo",sub="Gracile Grip"}
+	sets.weapons.None = {
+		-- main="Trishula",
+		-- sub="Utu Grip"
+	}
+
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {ear1="Lugra Earring +1",ear2="Sherida Earring",}
@@ -186,10 +224,23 @@ function init_gear_sets()
 	
 	-- Normal melee group
 
-	sets.engaged = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+	sets.engaged = {
+		-- ammo="Aurgelmir Orb +1",
+		ammo="Coiste Bodhar",
+		head="Flam. Zucchetto +2",
+		-- neck="Shulmanu Collar",
+		ear1="Brutal Earring",
+		ear2="Sherida Earring",
+		-- body=gear.valorous_wsd_body,
+		body="Flamma Korazin +2",
+		-- hands=gear.valorous_acc_hands,
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back="Brigantia's Mantle",
+		waist="Ioskeha Belt",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2"
+	}
     sets.engaged.SomeAcc = {ammo="Aurgelmir Orb +1",
 		head="Flam. Zucchetto +2",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Sherida Earring",
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Regal Ring",ring2="Niqmaddu Ring",
