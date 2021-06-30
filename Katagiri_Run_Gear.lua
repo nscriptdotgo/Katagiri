@@ -70,7 +70,7 @@ function init_gear_sets()
 		back=gear.enmity_jse_back,waist="Audumbla Sash",legs="Carmine Cuisses +1",feet="Erilaz Greaves +1"}
 		
     sets.Enmity.SIRDT = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
-        head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
+        head="Fu. Bandeau +2",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Gelatinous Ring +1",ring2="Moonbeam Ring",
         back="Moonbeam Cape",waist="Audumbla Sash",legs="Carmine Cuisses +1",feet="Erilaz Greaves +1"}
 
@@ -359,7 +359,7 @@ function init_gear_sets()
         }
 			
 	sets.midcast.FastRecast.DT = {ammo="Staunch Tathlum +1",
-		head="Fu. Bandeau +1",
+		head="Fu. Bandeau +2",
 		neck="Futhark Torque",
 		ear1="Odnowa Earring +1",
 		ear2="Odnowa Earring",
@@ -374,7 +374,7 @@ function init_gear_sets()
 	}
 		
 	sets.midcast.FastRecast.SIRD = {ammo="Staunch Tathlum +1",
-        head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
+        head="Fu. Bandeau +2",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Gelatinous Ring +1",ring2="Moonbeam Ring",
         back="Moonbeam Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
 
@@ -480,7 +480,7 @@ function init_gear_sets()
 			
 	sets.idle.Tank = {
 		ammo="Staunch Tathlum",
-        head="Fu. Bandeau +1",
+        head="Fu. Bandeau +2",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
 		ear2="Ethereal Earring",
@@ -496,7 +496,7 @@ function init_gear_sets()
 
 	sets.idle.KiteTank = {
 		ammo="Staunch Tathlum",
-        head="Fu. Bandeau +1",
+        head="Fu. Bandeau +2",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
 		ear2="Ethereal Earring",
@@ -549,7 +549,7 @@ function init_gear_sets()
 	
 	sets.defense.PDT = {
         ammo="Staunch Tathlum", --2/2
-        head="Fu. Bandeau +1", --6/0
+        head="Fu. Bandeau +2", --6/0
         body="Futhark Coat +3", --9/9
 		hands="Turms Mittens +1",
 		legs="Erilaz Leg Guards +1",
@@ -761,7 +761,7 @@ function init_gear_sets()
     --         back="Moonbeam Cape",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
     sets.engaged.Tank = {
         ammo="Staunch Tathlum", --2/2
-        head="Fu. Bandeau +1", --6/0
+        head="Fu. Bandeau +2", --6/0
         body="Futhark Coat +3", --9/9
 		hands="Turms Mittens +1",
 		legs="Erilaz Leg Guards +1",

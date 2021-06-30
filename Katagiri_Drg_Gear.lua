@@ -9,7 +9,7 @@ function user_job_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
-	state.Weapons:options('Trishula','None')
+	state.Weapons:options('Trishula','KajaLance','None')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
     select_default_macro_book()
@@ -20,6 +20,9 @@ function user_job_setup()
 	send_command('bind ^f11 gs c cycle MagicalDefenseMode')
 	send_command('bind @f7 gs c toggle AutoJumpMode')
 	send_command('bind @` gs c cycle SkillchainMode')
+
+	gear.da_jse_back = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}},
+
 end
 
 -- Define sets and vars used by this job file.
@@ -200,7 +203,7 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
-	sets.weapons.Reienkyo = {main="Reienkyo",sub="Gracile Grip"}
+	sets.weapons.KajaLance = {main="Kaja Lance",sub="Gracile Grip"}
 	sets.weapons.None = {
 		-- main="Trishula",
 		-- sub="Utu Grip"
@@ -236,7 +239,7 @@ function init_gear_sets()
 		-- hands=gear.valorous_acc_hands,
 		ring1="Petrov Ring",
 		ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",
+		back=gear.da_jse_back,
 		waist="Ioskeha Belt",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2"
