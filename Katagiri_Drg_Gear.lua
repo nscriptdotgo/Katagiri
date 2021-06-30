@@ -21,7 +21,7 @@ function user_job_setup()
 	send_command('bind @f7 gs c toggle AutoJumpMode')
 	send_command('bind @` gs c cycle SkillchainMode')
 
-	gear.da_jse_back = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}},
+	gear.da_jse_back = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
 
 end
 
@@ -35,33 +35,66 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Angon = {ammo="Angon"} --hands="Ptero. Fin. G. +1"
 	sets.precast.JA.Jump = {
-		ammo="Aurgelmir Orb +1",
+		-- ammo="Aurgelmir Orb +1",
 		head="Flam. Zucchetto +2",
-		neck="Ganesha's Mala",
-		ear1="Brutal Earring",
+		-- neck="Ganesha's Mala",
+		ear1="Telos Earring",
 		ear2="Sherida Earring",
 		body=gear.valorous_wsd_body,
-		hands=gear.valorous_acc_hands,
+		-- hands=gear.valorous_acc_hands,
 		ring1="Petrov Ring",
 		ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",
+		back=gear.da_jse_back,
 		waist="Windbuffet Belt +1",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2"
 	}
 	sets.precast.JA['Ancient Circle'] = {} --legs="Vishap Brais"
-	sets.precast.JA['High Jump'] = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Ganesha's Mala",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Windbuffet Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
-	sets.precast.JA['Soul Jump'] = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Ganesha's Mala",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Windbuffet Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
-	sets.precast.JA['Spirit Jump'] = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Ganesha's Mala",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",waist="Windbuffet Belt +1",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+	sets.precast.JA['High Jump'] = {
+		-- ammo="Aurgelmir Orb +1",
+		head="Flam. Zucchetto +2",
+		-- neck="Ganesha's Mala",
+		ear1="Telos Earring",
+		ear2="Sherida Earring",
+		body=gear.valorous_wsd_body,
+		-- hands=gear.valorous_acc_hands,
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back=gear.da_jse_back,
+		waist="Windbuffet Belt +1",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2"
+	}
+	sets.precast.JA['Soul Jump'] = {
+		-- ammo="Aurgelmir Orb +1",
+		head="Flam. Zucchetto +2",
+		-- neck="Ganesha's Mala",
+		ear1="Telos Earring",
+		ear2="Sherida Earring",
+		body=gear.valorous_wsd_body,
+		-- hands=gear.valorous_acc_hands,
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back=gear.da_jse_back,
+		waist="Windbuffet Belt +1",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2"
+	}
+	sets.precast.JA['Spirit Jump'] = {
+		-- ammo="Aurgelmir Orb +1",
+		head="Flam. Zucchetto +2",
+		-- neck="Ganesha's Mala",
+		ear1="Telos Earring",
+		ear2="Sherida Earring",
+		body=gear.valorous_wsd_body,
+		-- hands=gear.valorous_acc_hands,
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back=gear.da_jse_back,
+		waist="Windbuffet Belt +1",
+		legs="Sulev. Cuisses +2",
+		feet="Flam. Gambieras +2"
+	}
 	sets.precast.JA['Super Jump'] = {}
 	sets.precast.JA['Spirit Link'] = {head="Vishap Armet +1"} --head="Vishap Armet",hands="Lnc. Vmbrc. +2"
 	sets.precast.JA['Call Wyvern'] = {} --body="Ptero. Mail +1"
@@ -70,9 +103,9 @@ function init_gear_sets()
 	sets.precast.JA['Steady Wing'] = {}
 	
 	-- Breath sets
-	sets.precast.JA['Restoring Breath'] = {back="Brigantia's Mantle"}
-	sets.precast.JA['Smiting Breath'] = {back="Brigantia's Mantle"}
-	sets.HealingBreath = {back="Brigantia's Mantle"}
+	sets.precast.JA['Restoring Breath'] = {back=gear.da_jse_back}
+	sets.precast.JA['Smiting Breath'] = {back=gear.da_jse_back}
+	sets.HealingBreath = {back=gear.da_jse_back}
 	--sets.SmitingBreath = {back="Brigantia's Mantle"}
 
 	-- Fast cast sets for spells
@@ -231,7 +264,7 @@ function init_gear_sets()
 		-- ammo="Aurgelmir Orb +1",
 		ammo="Coiste Bodhar",
 		head="Flam. Zucchetto +2",
-		-- neck="Shulmanu Collar",
+		neck="Dgn. Collar +1",
 		ear1="Brutal Earring",
 		ear2="Sherida Earring",
 		-- body=gear.valorous_wsd_body,
