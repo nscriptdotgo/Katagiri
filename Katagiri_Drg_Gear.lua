@@ -140,7 +140,8 @@ function init_gear_sets()
 
 	-- Default set for any weaponskill that isn't any more specifically defined
 	
-	sets.precast.WS = {ammo="Knobkierrie",
+	sets.precast.WS = {
+		ammo="Knobkierrie",
 		head="Flam. Zucchetto +2",
 		neck="Dgn. Collar +1",
 		ear1="Moonshade Earring",
@@ -149,7 +150,7 @@ function init_gear_sets()
 		hands="Sulev. Gauntlets +2",
 		ring1="Rajas Ring",
 		ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",
+		back=gear.da_jse_back,
 		waist="Shadow Belt",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2"
@@ -161,7 +162,9 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {})
+	sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {
+		
+	})
 	sets.precast.WS['Stardiver'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Stardiver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
