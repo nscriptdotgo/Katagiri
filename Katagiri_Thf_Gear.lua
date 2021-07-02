@@ -40,7 +40,11 @@ function init_gear_sets()
     -- Special sets (required by rules)
     --------------------------------------
 
-	sets.TreasureHunter = {hands="Plunderer's Armlets", feet="Skulker's Poulaines +1"}
+	sets.TreasureHunter = {
+        hands="Plunderer's Armlets +1",
+        waist="Chaac Belt", 
+        feet="Skulker's Poulaines +1"
+    }
     sets.ExtraRegen = {}
     sets.Kiting = {feet="Jute Boots +1"}
 
