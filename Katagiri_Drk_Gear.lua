@@ -7,7 +7,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Montante','Cronus')
+	state.Weapons:options('Montante','Cronus','Apocalypse')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -22,7 +22,7 @@ function user_job_setup()
     send_command('bind @q input /ma "Stun" <t>')
 	send_command('bind @` gs c cycle SkillchainMode')
 
-    autows = 'Torcleaver'
+    autows = 'Catastrophe'
     autowstp = 1000
 
     gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
@@ -261,7 +261,23 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {})
+    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {
+        -- main="Apocalypse",
+        -- sub="Utu Grip",
+        ammo="Knobkierrie",
+        -- head="Ratri Sallet +1",
+        neck="Abyssal Beads +1",
+        ear1="Lugra Earring +1",
+        ear2="Thrud Earring",
+        -- body="Ignominy Cuirass +3",
+        -- hands="Rat. Gadlings +1",
+        ring1="Karieyh Ring",
+        ring2="Niqmaddu Ring",
+        back=gear.wsd_str_jse_back,
+        waist="Shadow Belt",
+        -- legs="Ratri Cuisses +1",
+        feet="Rat. Sollerets"
+    })
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -584,7 +600,7 @@ function init_gear_sets()
     -- sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
     sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
     sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Gracile Grip"}
-	-- sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
+	sets.weapons.Apocalypse = {main="Apocalypse",sub="Gracile Grip"}
 	
     end
 	
