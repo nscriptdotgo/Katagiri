@@ -23,7 +23,7 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 
     autows = 'Catastrophe'
-    autowstp = 1000
+    autowstp = 1250
 
     gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
     gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
@@ -171,17 +171,17 @@ function init_gear_sets()
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
         ammo="Egoist's Tathlum",
         neck="Sanctity Necklace",
-        -- head="Ratri Sallet +1",
+        head="Ratri Sallet",
         ear1="Tuisto Earring",
         ear2="Odnowa Earring +1",
         body="Heathen's Cuirass +1",
         --body="Ratri Breastplate +1",
-        -- hands="Ratri Gadlings +1",
+        hands="Ratri Gadlings",
         -- back="Trepidity Mantle",
         ring1="Moonbeam Ring", -- matk 4
         ring2="Gelatinous Ring +1", -- matk 4
         waist="Oneiros Belt",
-        -- legs="Ratri Cuisses +1",
+        legs="Ratri Cuisses",
         feet="Amm Greaves"
     })
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {
@@ -265,18 +265,18 @@ function init_gear_sets()
         -- main="Apocalypse",
         -- sub="Utu Grip",
         ammo="Knobkierrie",
-        -- head="Ratri Sallet +1",
-        neck="Abyssal Beads +1",
+        head="Ratri Sallet",
+        neck="Abyssal Bead Necklace +1",
         ear1="Lugra Earring +1",
         ear2="Thrud Earring",
         -- body="Ignominy Cuirass +3",
-        -- hands="Rat. Gadlings +1",
+        hands="Ratri Gadlings",
         ring1="Karieyh Ring",
         ring2="Niqmaddu Ring",
         back=gear.wsd_str_jse_back,
         waist="Shadow Belt",
-        -- legs="Ratri Cuisses +1",
-        feet="Rat. Sollerets"
+        legs="Ratri Cuisses",
+        feet="Ratri Sollerets"
     })
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -285,19 +285,22 @@ function init_gear_sets()
 
     sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
         ammo="Knobkierrie",
-        head=Odyssean.Head.WSD,
-        ring1="Niqmaddu Ring",
-        ring2="Rufescent Ring",
+        head="Ratri Sallet",
         neck="Caro Necklace",
+        -- body="Ignominy Cuirass +3",
+        hands="Ratri Gadlings",
+        ring1="Rajas Ring",
+        ring2="Niqmaddu Ring",
+        back=gear.wsd_str_jse_back,
         waist="Grunfeld Rope",
-        legs="Sulevia Cuisses +1",
+        legs="Ratri Cuisses",
         feet="Ratri Sollerets"
     })
 	
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
         head=Odyssean.Head.WSD,
         hands=gear.odyssean_wsd_hands,
-        ring1="Niqmaddu Ring",
+        ring2="Niqmaddu Ring",
         neck="Light Gorget",
         waist="Light Belt",
         back=gear.wsd_vit_jse_back
@@ -305,7 +308,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
         head="Fallen's Burgeonet +3",
-        neck="Abyssal Bead Necklace +2",
+        neck="Abyssal Bead Necklace +1",
     })
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {
         body="Fallen's Cuirass +3",
@@ -439,9 +442,9 @@ function init_gear_sets()
 		waist="Ioskeha Belt",
 		ear1="Cessance Earring",
 		ear2="Telos Earring",
-		ring1="Niqmaddu Ring",
-		ring2="Petrov Ring",
-		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back=gear.da_jse_back
     }
     sets.engaged.SomeAcc = set_combine(sets.engaged, {
         ear2="Telos Earring",
@@ -453,16 +456,38 @@ function init_gear_sets()
         ear1="Cessance Earring",
         ear2="Telos Earring",
         body="Flamma Korazin +2",
-        back=Ankou.STP,
+        back=gear.da_jse_back,
     })
-    sets.engaged.FullAcc = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Telos Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Flamma Ring",ring2="Ramuh Ring +1",
-		back="Ankou's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
-    sets.engaged.Fodder = {ammo="Aurgelmir Orb +1",
-		head="Flam. Zucchetto +2",neck="Asperity Necklace",ear1="Brutal Earring",ear2="Sherida Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
-		back="Ankou's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+    sets.engaged.FullAcc = {
+        -- ammo="Aurgelmir Orb +1",
+		head="Flam. Zucchetto +2",
+        -- neck="Combatant's Torque",
+        ear1="Mache Earring +1",
+        ear2="Telos Earring",
+		body=gear.valorous_wsd_body,
+        hands=gear.valorous_acc_hands,
+        ring1="Flamma Ring",
+        -- ring2="Ramuh Ring +1",
+		back=gear.da_jse_back,
+        waist="Ioskeha Belt",
+        legs="Sulev. Cuisses +2",
+        feet="Flam. Gambieras +2"
+    }
+    sets.engaged.Fodder = {
+        ammo="Ginsen",
+		head="Flam. Zucchetto +2",
+        neck="Asperity Necklace",
+        ear1="Brutal Earring",
+        ear2="Sherida Earring",
+		body=gear.valorous_wsd_body,
+        hands=gear.valorous_acc_hands,
+        ring1="Petrov Ring",
+        ring2="Niqmaddu Ring",
+		back=gear.da_jse_back,
+        waist="Ioskeha Belt",
+        legs="Sulev. Cuisses +2",
+        feet="Flam. Gambieras +2"
+    }
     sets.engaged.DTLite = {
         ammo="Ginsen",
         head="Sulevia's Mask +1",
