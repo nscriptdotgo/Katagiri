@@ -368,10 +368,10 @@ function init_gear_sets()
         hands="Sulev. Gauntlets +2",
         legs="Sulevi. Cuisses +1",
         feet="Sulev. Leggings +2",
-        neck="Sanctity Necklace",
+        neck="Abyssal Bead Necklace +1",
         waist="Flume Belt +1",
         left_ear="Odnowa Earring +1",
-        right_ear="Ethereal Earring",
+        right_ear="Infused Earring",
         left_ring="Paguroidea Ring",
         right_ring="Defending Ring",
         back="Shadow Mantle",
@@ -447,26 +447,23 @@ function init_gear_sets()
 		back=gear.da_jse_back
     }
     sets.engaged.SomeAcc = set_combine(sets.engaged, {
-        ear2="Telos Earring",
+        -- ear2="Telos Earring",
         -- ring2="Regal Ring",
-        body=Valorous.Body.STP
+        ammo="Seething Bomblet +1",
+        body=Valorous.Body.WSD
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
-        -- ammo="Hasty Pinion +1",
-        ear1="Cessance Earring",
-        ear2="Telos Earring",
         body="Flamma Korazin +2",
-        back=gear.da_jse_back,
     })
     sets.engaged.FullAcc = {
-        -- ammo="Aurgelmir Orb +1",
+        ammo="Seething Bomblet +1",
 		head="Flam. Zucchetto +2",
-        -- neck="Combatant's Torque",
-        ear1="Mache Earring +1",
+        neck="Abyssal Bead Necklace +1",
+        ear1="Cessance Earring",
         ear2="Telos Earring",
 		body=gear.valorous_wsd_body,
-        hands=gear.valorous_acc_hands,
-        ring1="Flamma Ring",
+        hands="Flamma Manopolas +2",
+        -- ring1="Flamma Ring",
         -- ring2="Ramuh Ring +1",
 		back=gear.da_jse_back,
         waist="Ioskeha Belt",
@@ -478,7 +475,7 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
         neck="Asperity Necklace",
         ear1="Brutal Earring",
-        ear2="Sherida Earring",
+        ear2="Cessance Earring",
 		body=gear.valorous_wsd_body,
         hands=gear.valorous_acc_hands,
         ring1="Petrov Ring",
