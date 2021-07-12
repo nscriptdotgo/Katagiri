@@ -683,8 +683,9 @@ function init_gear_sets()
     sets.engaged.SomeAcc = {
         ammo="Yamarang",
 		head="Ayanmo Zucchetto +2",
-        }
+    }
 	sets.engaged.Acc = {
+		ammo="Yamarang",
 		legs="Meghanada Chausses +2", --+29
 		waist="Kentarch Belt +1", --+2
         }
@@ -791,7 +792,7 @@ function init_gear_sets()
 		waist="Flume Belt +1",
     }
     sets.engaged.SomeAcc.Tank = set_combine(sets.engaged.Tank, {
-        -- ammo="Yamarang",
+        ammo="Yamarang",
 		head="Ayanmo Zucchetto +2",
     })
 	sets.engaged.Acc.Tank = set_combine(sets.engaged.Tank, {
