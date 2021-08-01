@@ -7,7 +7,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Montante','Cronus','Apocalypse')
+	state.Weapons:options('Apocalypse','Montante')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -22,8 +22,8 @@ function user_job_setup()
     send_command('bind @q input /ma "Stun" <t>')
 	send_command('bind @` gs c cycle SkillchainMode')
 
-    autows = 'Catastrophe'
-    autowstp = 1250
+    autows = 'Cross Reaper'
+    autowstp = 1750
 
     gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
     gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
@@ -502,14 +502,14 @@ function init_gear_sets()
         neck="Loricate Torque +1",
         ear1="Brutal Earring",
         ear2="Cessance Earring",
-        body="Valorous Mail",
+        body="Sulevia's Platemail +2",
         hands="Sulev. Gauntlets +2",
         ring1="Moonbeam Ring",
         ring2="Defending Ring",
         back=gear.da_jse_back,
         waist="Ioskeha Belt",
         legs="Sulev. Cuisses +2",
-        feet="Flam. Gambieras +2"
+        feet="Sulev. Leggings +2"
     }
 --Example sets:
 --[[

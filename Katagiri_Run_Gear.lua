@@ -610,7 +610,7 @@ function init_gear_sets()
 	sets.defense.MEVA = {
 		-- main="Aettir",
 		-- sub="Utu Grip",
-		ammo="Staunch Tathlum",
+		ammo="Yamarang",
         head="Erilaz Galea +1",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
