@@ -22,6 +22,8 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 
 	gear.da_jse_back = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
+	gear.wsd_str_jse_back = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
 
 end
 
@@ -97,9 +99,9 @@ function init_gear_sets()
 	}
 	sets.precast.JA['Super Jump'] = {}
 	sets.precast.JA['Spirit Link'] = {head="Vishap Armet +1"} --head="Vishap Armet",hands="Lnc. Vmbrc. +2"
-	sets.precast.JA['Call Wyvern'] = {} --body="Ptero. Mail +1"
-	sets.precast.JA['Deep Breathing'] = {} --hands="Ptero. Armet +1"
-	sets.precast.JA['Spirit Surge'] = {} --body="Ptero. Mail +1"
+	sets.precast.JA['Call Wyvern'] = { body="Ptero. Mail +1" } --body="Ptero. Mail +1"
+	sets.precast.JA['Deep Breathing'] = { hands="Ptero. Armet +1" } --hands="Ptero. Armet +1"
+	sets.precast.JA['Spirit Surge'] = { body="Ptero. Mail +1" } --body="Ptero. Mail +1"
 	sets.precast.JA['Steady Wing'] = {}
 	
 	-- Breath sets
@@ -163,7 +165,7 @@ function init_gear_sets()
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {
-		
+		back=gear.wsd_str_jse_back
 	})
 	sets.precast.WS['Stardiver'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -173,6 +175,17 @@ function init_gear_sets()
 	sets.precast.WS['Drakesbane'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Drakesbane'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Drakesbane'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
+	sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, {
+		body=gear.valorous_wsd_body,
+		ring1="Karieyh Ring",
+		legs="Sulev. Cuisses +2",
+		feet="Sulev. Leggings +2"
+		back=gear.wsd_str_jse_back
+	})
+	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Impulse Drive'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
 
 	
@@ -235,7 +248,9 @@ function init_gear_sets()
     -- Extra defense sets.  Apply these on top of melee or defense sets.
     sets.passive.MP = {ear2="Ethereal Earring",waist="Flume Belt +1"}
     sets.passive.Twilight = {head="Twilight Helm", body="Twilight Mail"}
-	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
+	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
+		waist="Chaac Belt"
+	})
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
@@ -350,7 +365,7 @@ function select_default_macro_book()
     if player.sub_job == 'WAR' then
         set_macro_page(5, 13)
     elseif player.sub_job == 'SAM' then
-        set_macro_page(3, 13)
+        set_macro_page(1, 10)
     elseif player.sub_job == 'BLU' then
         set_macro_page(2, 13)
     else

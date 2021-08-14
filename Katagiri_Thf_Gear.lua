@@ -330,7 +330,7 @@ function init_gear_sets()
     sets.idle = {
         ammo="Staunch Tathlum",
         head="Meg. Visor +1",
-        neck="Twilight Torque",
+        neck="Loricate Torque +1",
         ear1="Etiolation Earring",
         ear2="Odnowa Earring +1",
         body="Meg. Cuirie +2",

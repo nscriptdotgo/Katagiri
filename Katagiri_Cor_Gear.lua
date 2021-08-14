@@ -101,7 +101,7 @@ function init_gear_sets()
         back=gear.ranger_wsd_jse_back,waist="Eschan Stone",legs="Malignance Tights",feet="Chass. Bottes +1"}
 	
     sets.precast.CorsairShot.Proc = {ammo=gear.RAbullet,
-        head="Wh. Rarab Cap +1",neck="Twilight Torque",ear1="Genmei Earring",ear2="Odnowa Earring +1",
+        head="Wh. Rarab Cap +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Odnowa Earring +1",
         body="Emet Harness +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Chass. Bottes +1"}
 
@@ -114,7 +114,7 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-        head="Carmine Mask +1",neck="Twilight Torque",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
+        head="Carmine Mask +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
         body=gear.herculean_waltz_body,hands=gear.herculean_waltz_hands,ring1="Defending Ring",ring2="Valseur's Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Dashing Subligar",feet=gear.herculean_waltz_feet}
 		
@@ -241,7 +241,7 @@ function init_gear_sets()
 		
 		--Because omen skillchains.
     sets.precast.WS['Burning Blade'] = {ammo=gear.RAbullet,
-        head="Meghanada Visor +2",neck="Twilight Torque",ear1="Genmei Earring",ear2="Odnowa Earring +1",
+        head="Meghanada Visor +2",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Odnowa Earring +1",
         body="Meg. Cuirie +2",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Meg. Chausses +2",feet="Meg. Jam. +2"}
 
@@ -296,7 +296,7 @@ function init_gear_sets()
     sets.idle = {
         ammo=gear.RAbullet,
         head="Meghanada Visor +1",
-        neck="Twilight Torque",
+        neck="Loricate Torque +1",
         ear1="Etiolation Earring",
         ear2="Odnowa Earring +1",
         body="Meg. Cuirie +2",
@@ -311,18 +311,18 @@ function init_gear_sets()
     }
 		
     sets.idle.PDT = {ammo=gear.RAbullet,
-        head="Meghanada Visor +1",neck="Twilight Torque",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
+        head="Meghanada Visor +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
         body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonlight Cape",waist="Carrier's Sash",legs="Malignance Tights",feet="Meg. Jam. +1"}
 		
     sets.idle.Refresh = {ammo=gear.RAbullet,
-        head="Rawhide Mask",neck="Twilight Torque",ear1="Genmei Earring",ear2="Ethereal Earring",
+        head="Rawhide Mask",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
         body="Mekosu. Harness",hands=gear.herculean_refresh_hands,ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet="Meg. Jam. +1"}
     
     -- Defense sets
     sets.defense.PDT = {ammo=gear.RAbullet,
-        head="Meghanada Visor +1",neck="Twilight Torque",ear1="Genmei Earring",ear2="Odnowa Earring +1",
+        head="Meghanada Visor +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Odnowa Earring +1",
         body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Shadow Ring",
         back="Shadow Mantle",waist="Flume Belt +1",legs="Malignance Tights",feet="Meg. Jam. +1"}
 
@@ -380,12 +380,12 @@ function init_gear_sets()
 		back=gear.tp_jse_back,waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Meg. Jam. +1"}
 		
     sets.engaged.DT = {
-        head="Meghanada Visor +1",neck="Twilight Torque",ear1="Cessance Earring",ear2="Brutal Earring",
+        head="Meghanada Visor +1",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
         body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Petrov Ring",
         back=gear.tp_jse_back,waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Meg. Jam. +1"}
     
     sets.engaged.Acc.DT = {
-        head="Meghanada Visor +1",neck="Twilight Torque",ear1="Cessance Earring",ear2="Telos Earring",
+        head="Meghanada Visor +1",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Telos Earring",
         body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Ramuh Ring +1",
         back=gear.tp_jse_back,waist="Olseni Belt",legs="Malignance Tights",feet="Meg. Jam. +1"}
 
@@ -425,12 +425,12 @@ function init_gear_sets()
     }
 		
     sets.engaged.DW.DT = {
-        head="Meghanada Visor +1",neck="Twilight Torque",ear1="Suppanomimi",ear2="Brutal Earring",
+        head="Meghanada Visor +1",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Brutal Earring",
         body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Petrov Ring",
         back=gear.tp_jse_back,waist="Reiki Yotai",legs="Malignance Tights",feet="Meg. Jam. +1"}
     
     sets.engaged.DW.Acc.DT = {
-        head="Meghanada Visor +1",neck="Twilight Torque",ear1="Suppanomimi",ear2="Telos Earring",
+        head="Meghanada Visor +1",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Telos Earring",
         body="Meg. Cuirie +1",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Ramuh Ring +1",
         back=gear.tp_jse_back,waist="Reiki Yotai",legs="Malignance Tights",feet="Meg. Jam. +1"}
 end
@@ -438,7 +438,7 @@ end
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
     if player.sub_job == 'NIN' then
-        set_macro_page(2, 11)
+        set_macro_page(1, 9)
     elseif player.sub_job == 'DNC' then
 		set_macro_page(1, 11)
     elseif player.sub_job == 'RNG' then
