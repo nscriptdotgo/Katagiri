@@ -180,7 +180,7 @@ function init_gear_sets()
 		body=gear.valorous_wsd_body,
 		ring1="Karieyh Ring",
 		legs="Sulev. Cuisses +2",
-		feet="Sulev. Leggings +2"
+		feet="Sulev. Leggings +2",
 		back=gear.wsd_str_jse_back
 	})
 	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
