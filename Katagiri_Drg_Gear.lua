@@ -254,7 +254,7 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
-	sets.weapons.KajaLance = {main="Kaja Lance",sub="Gracile Grip"}
+	sets.weapons.KajaLance = {main="Shining One",sub="Gracile Grip"}
 	sets.weapons.None = {
 		-- main="Trishula",
 		-- sub="Utu Grip"
