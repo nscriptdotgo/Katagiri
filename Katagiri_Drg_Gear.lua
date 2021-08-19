@@ -186,6 +186,17 @@ function init_gear_sets()
 	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Impulse Drive'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	-- Savage Blade
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		body=gear.valorous_wsd_body,
+		ring1="Karieyh Ring",
+		legs="Sulev. Cuisses +2",
+		feet="Sulev. Leggings +2",
+		back=gear.wsd_str_jse_back
+	})
+	sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
 
 	
@@ -197,14 +208,14 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 		ammo="Staunch Tathlum",
-		head="Sulevia's Mask +1",
+        head="Hjarrandi Helm",
 		neck="Loricate Torque +1",
 		ear1="Odnowa Earring +1",
-		ear2="Ethereal Earring",
+		ear2="Infused Earring",
 		body="Sulevia's Plate. +2",
 		hands="Sulev. Gauntlets +2",
 		ring1="Defending Ring",
-		ring2="Gelatinous Ring +1",
+		ring2="Paguroidea Ring",
 		back="Shadow Mantle",
 		waist="Flume Belt +1",
 		legs="Carmine Cuisses +1",

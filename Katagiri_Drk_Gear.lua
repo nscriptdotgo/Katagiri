@@ -381,7 +381,7 @@ function init_gear_sets()
            
     sets.idle = {
         ammo="Staunch Tathlum",
-        head="Sulevia's Mask +1",
+        head="Hjarrandi Helm",
         body="Sulevia's Plate. +2",
         hands="Sulev. Gauntlets +2",
         legs="Sulevi. Cuisses +1",
