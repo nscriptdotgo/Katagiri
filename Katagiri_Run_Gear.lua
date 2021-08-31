@@ -391,7 +391,7 @@ function init_gear_sets()
 	})
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'],{
 		-- main="Deacon Sword",
-		head="Futhark Bandeau +1",
+		head="Futhark Bandeau +2",
 		-- hands=gear.herculean_phalanx_hands,
 		legs="Carmine Cuisses +1",
 		-- feet=gear.herculean_nuke_feet

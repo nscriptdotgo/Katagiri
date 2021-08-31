@@ -3,13 +3,13 @@ function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
-    state.HybridMode:options('Normal')
+    state.HybridMode:options('Normal','DT')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
-	state.Weapons:options('Trishula','KajaLance','None')
+	state.Weapons:options('Trishula','ShiningOne','None')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
     select_default_macro_book()
@@ -265,7 +265,7 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
-	sets.weapons.KajaLance = {main="Shining One",sub="Gracile Grip"}
+	sets.weapons.ShiningOne = {main="Shining One",sub="Gracile Grip"}
 	sets.weapons.None = {
 		-- main="Trishula",
 		-- sub="Utu Grip"
@@ -323,6 +323,23 @@ function init_gear_sets()
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
 		back="Brigantia's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
 
+		sets.engaged.DT = {
+			-- ammo="Aurgelmir Orb +1",
+			ammo="Coiste Bodhar",
+			head="Flam. Zucchetto +2",
+			neck="Dgn. Collar +1",
+			ear1="Brutal Earring",
+			ear2="Sherida Earring",
+			-- body=gear.valorous_wsd_body,
+			body="Flamma Korazin +2",
+			-- hands=gear.valorous_acc_hands,
+			ring1="Petrov Ring",
+			ring2="Niqmaddu Ring",
+			back=gear.da_jse_back,
+			waist="Ioskeha Belt",
+			legs="Sulev. Cuisses +2",
+			feet="Flam. Gambieras +2"
+		}
     sets.engaged.AM = {}
     sets.engaged.AM.SomeAcc = {}
 	sets.engaged.AM.Acc = {}
