@@ -102,7 +102,7 @@ function init_gear_sets()
 
 	sets.precast.FC = {
         -- ammo="Impatiens",
-        head="Fallen's Burgonet +1",
+        head="Sakpata's Helm",
         neck="Voltsurge Torque",
         body=Odyssean.Body.FC,
         ear1="Malignance Earring",
@@ -347,7 +347,7 @@ function init_gear_sets()
     sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
         -- neck="Breeze Gorget",
         body="Valorous Mail",
-        hands="Sulevia's Gauntlets +2",
+        hands="Sakpata's Gauntlets",
         waist="Soil Belt",
         -- legs="Fallen's Flanchard +3",
         feet="Sulevia's Leggings +2"
@@ -356,7 +356,7 @@ function init_gear_sets()
     sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {
         ammo="Seething Bomblet +1",
         legs="Fallen's Flanchard",
-        feet="Sulevia's Leggings +2"
+        legs="Sakpata's Cuisses",
     })
     sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})     
@@ -381,11 +381,11 @@ function init_gear_sets()
            
     sets.idle = {
         ammo="Staunch Tathlum",
-        head="Hjarrandi Helm",
-        body="Sulevia's Plate. +2",
-        hands="Sulev. Gauntlets +2",
-        legs="Sulevi. Cuisses +1",
-        feet="Sulev. Leggings +2",
+        head="Sakpata's Helm",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
         neck="Lissome Necklace",
         waist="Flume Belt +1",
         left_ear="Odnowa Earring +1",
@@ -397,11 +397,11 @@ function init_gear_sets()
 		
     sets.idle.PDT = {
         ammo="Staunch Tathlum",
-        head="Sulevia's Mask +1",
-        body="Sulevia's Plate. +2",
-        hands="Sulev. Gauntlets +2",
-        legs="Sulevi. Cuisses +1",
-        feet="Sulev. Leggings +2",
+        head="Sakpata's Helm",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
         neck="Abyssal Bead Necklace +1",
         waist="Flume Belt +1",
         left_ear="Odnowa Earring +1",
@@ -421,18 +421,18 @@ function init_gear_sets()
     -- Defense sets
 	sets.defense.PDT = {
         ammo="Seething Bomblet +1", -- 2% haste
-        head="Hjarrandi Helm", -- no haste
-        neck="Loricate Torque +1",
-        --body="Tartarus Platemail", -- 3% haste
-        body="Sulevia's Platemail +1", -- 1% haste
-        hands="Sulevia's Gauntlets +1",
+        head="Sakpata's Helm",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
         ear1="Odnowa Earring +1",
         ear2="Cessance Earring",
         ring1="Gelatinous Ring +1",
         ring2="Defending Ring",
+        neck="Loricate Torque +1",
         -- back="Grounded Mantle +1", -- 2% haste
-        --waist="Sailfi Belt +1", -- 9% haste
-        --legs="Sulevia's Flanchard +3", -- 5% haste
+        waist="Flume Belt +1", -- 9% haste
         feet="Volte Sollerets" -- 3% haste
     }
 		
@@ -450,18 +450,18 @@ function init_gear_sets()
 		
 	sets.defense.MEVA = {
         ammo="Staunch Tathlum +1",
-		head="Sulevia's Mask +1",
+        head="Sakpata's Helm",
         neck="Warder's Charm",
         -- ear1="Genmei Earring",
         ear2="Ethereal Earring",
-		body="Sulevia's Platemail +2",
-        hands="Sulev. Gauntlets +2",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
         ring1="Moonbeam Ring",
         ring2="Defending Ring",
 		back="Moonlight Cape",
         waist="Flume Belt +1",
-        legs="Sulev. Cuisses +2",
-        feet="Amm Greaves"
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
     }
      
 	sets.Kiting = {legs="Carmine Cuisses +1"}
@@ -474,9 +474,9 @@ function init_gear_sets()
 	sets.engaged = {
         ammo="Ginsen",
 		head="Flamma Zucchetto +2",
-		body="Flamma Korazin +2",
-		hands="Flamma Manopolas +2",
-		legs=Odyssean.Legs.TP,
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
 		feet="Flamma Gambieras +2",
 		neck="Lissome Necklace",
 		waist="Ioskeha Belt",
@@ -527,36 +527,36 @@ function init_gear_sets()
     }
     sets.engaged.DT = {
         ammo="Ginsen",
-        head="Hjarrandi Helm",
-        neck="Loricate Torque +1",
+        head="Sakpata's Helm",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
         ear1="Brutal Earring",
         ear2="Cessance Earring",
-        body="Sulevia's Platemail +2",
-        hands="Sulev. Gauntlets +2",
         ring1="Moonbeam Ring",
+        neck="Loricate Torque +1",
         ring2="Defending Ring",
         back=gear.da_jse_back,
         waist="Ioskeha Belt",
-        legs="Sulev. Cuisses +2",
-        feet="Flamma Gambieras +2"
     }
     -- sets.engaged.PDT = {}
 	sets.engaged.SomeAcc.PDT = {
         -- main="Caladbolg",
         -- sub="Utu Grip",
         ammo="Ginsen",
-        head="Sulevia's Mask +2",
+        head="Sakpata's Helm",
         neck="Loricate Torque +1",
         ear1="Brutal Earring",
         ear2="Cessance Earring",
-        body="Sulevia's Platemail +2",
-        hands="Sulev. Gauntlets +2",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
         ring1="Moonbeam Ring",
         ring2="Defending Ring",
         back=gear.da_jse_back,
         waist="Ioskeha Belt",
-        legs="Sulev. Cuisses +2",
-        feet="Flam. Gambieras +2"
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
     }
 	sets.engaged.Acc.PDT = {}
 	sets.engaged.FullAcc.PDT = {}
@@ -683,7 +683,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Montante = {main="Montante +1",sub="Gracile Grip"}
     -- sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
-    sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
+    -- sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
     sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Gracile Grip"}
 	sets.weapons.Apocalypse = {main="Apocalypse",sub="Gracile Grip"}
 	

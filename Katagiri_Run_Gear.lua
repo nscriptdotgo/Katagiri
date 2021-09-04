@@ -393,12 +393,12 @@ function init_gear_sets()
 		-- main="Deacon Sword",
 		head="Futhark Bandeau +2",
 		-- hands=gear.herculean_phalanx_hands,
-		legs="Carmine Cuisses +1",
+		legs=gear.herculean_phalanx_legs,
 		-- feet=gear.herculean_nuke_feet
 	})
     sets.midcast['Regen'] = set_combine(sets.midcast['Enhancing Magic'],{
-		head="Rune. Bandeau +2"
-		-- neck="Sacro Gorget"
+		head="Rune. Bandeau +2",
+		neck="Sacro Gorget"
 	}) 
 	sets.midcast['Refresh'] = set_combine(sets.midcast['Enhancing Magic'],{
 		head="Erilaz Galea +1"
@@ -449,7 +449,7 @@ function init_gear_sets()
 		waist="Gishdubar Sash"
 	}
 	sets.Self_Refresh = set_combine(sets.midcast['Enhancing Magic'], {head="Erilaz Galea +1"})
-	sets.Phalanx_Received = {main="Deacon Sword",hands=gear.herculean_phalanx_hands,feet=gear.herculean_nuke_feet}
+	sets.Phalanx_Received = {main="Deacon Sword",hands=gear.herculean_phalanx_hands,legs=gear.herculean_phalanx_legs,feet=gear.herculean_nuke_feet}
 	
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
