@@ -1,7 +1,7 @@
 function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
-    state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
+    state.WeaponskillMode:options('Match','AtkCapped','Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.HybridMode:options('Normal','DT')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
@@ -36,44 +36,6 @@ end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
-
-	--- Ankou ---
-	Ankou = {}
-    Ankou.FC  = { name="Ankou's Mantle", augments={'"Fast Cast"+10',}}
-    Ankou.STP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}}
-
-	--- Odyssean ---
-	Odyssean = {}
-    Odyssean.Legs = {}
-    Odyssean.Hands = {}
-    Odyssean.Head = {}
-    Odyssean.Legs.TP = { name="Odyssean Cuisses", augments={'"Dbl.Atk."+5','DEX+8','Accuracy+2',}}
-    Odyssean.Legs.WS = { name="Odyssean Cuisses", augments={'Accuracy+8 Attack+8','Weapon skill damage +4%','STR+7','Accuracy+7',}}
-    Odyssean.Legs.FC = {name="Odyssean Cuisses",augments={'"Fast Cast"+5','Magic Accuracy+21',}}
-    Odyssean.Hands.WSD = { name="Odyssean Gauntlets", augments={'Weapon skill damage +4%','Accuracy+9 Attack+9','Haste+2','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}
-    Odyssean.Head.WSD = { name="Odyssean Helm", augments={'Accuracy+14','Weapon skill damage +5%','Attack+1',}}
-
-
-
-    
-    Odyssean.Feet = {}
-    Odyssean.Body = {}
-    Odyssean.Feet.FC = { name="Odyssean Greaves", augments={'Attack+20','"Fast Cast"+4','Accuracy+15',}}
-    Odyssean.Body.FC = { name="Odyssean Chestplate", augments={'MND+11','"Fast Cast"+3','Accuracy+14',}}
-
-	--- Valorous ---
-	Valorous = {}
-    Valorous.Feet = {}
-    Valorous.Body = {}
-    
-   
-    Valorous.Feet.TH = { name="Valorous Greaves", augments={'CHR+13','INT+1','"Treasure Hunter"+2','Accuracy+12 Attack+12','Mag. Acc.+1 "Mag.Atk.Bns."+1',}}
-    Valorous.Feet.TP = { name="Valorous Greaves", augments={'Accuracy+27','"Store TP"+6','INT+1',}}
-    
-    --Valorous.Body.STP = { name="Valorous Mail", augments={'Accuracy+30','"Store TP"+6','DEX+3','Attack+14',}}
-	Valorous.Body.STP = { name="Valorous Mail", augments={'Accuracy+4','"Store TP"+6','Attack+10',}}
-    Valorous.Body.WSD = { name="Valorous Mail", augments={'Accuracy+28','Weapon Skill Damage + 2%','Attack+12','VIT+9',}}
-    Valorous.Body.DA = { name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','VIT+4','Attack+6',}}
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
@@ -104,13 +66,13 @@ function init_gear_sets()
         -- ammo="Impatiens",
         head="Sakpata's Helm",
         neck="Voltsurge Torque",
-        body=Odyssean.Body.FC,
+        body=gear.odyssean_fc_body,
         ear1="Malignance Earring",
         ear2="Loquacious Earring",
         hands="Leyline Gloves",
         -- ring1="Kishar Ring",
         -- ring2="Weatherspoon Ring", -- 10 macc
-        legs=Odyssean.Legs.FC,
+        legs=gear.odyssean_fc_legs,
         back=gear.fc_jse_back,
         waist="Flume Belt +1",
         feet="Carmine Greaves"
@@ -127,7 +89,7 @@ function init_gear_sets()
         -- ammo="Impatiens",
         head="Fallen's Burgeonet +1",
         -- back="Grounded Mantle +1",
-        -- waist="Sailfi Belt +1",
+        waist="Sailfi Belt +1",
         legs="Carmine Cuisses +1",
         -- ring2="Weatherspoon Ring", -- 10 macc
         feet="Carmine Greaves"
@@ -137,12 +99,10 @@ function init_gear_sets()
  
 	sets.midcast['Dark Magic'] = {
         --ammo="Pemphredo Tathlum", 
-        --head="Ratri Sallet +1", -- 45 macc
-        head="Pixie Hairpin +1", -- 19
+        head="Ratri Sallet", -- 45 macc
         neck="Deceiver's Torque", -- 10 dark + 17 macc
-        --ear1="Malignance Earring",
         ear1="Mani Earring",
-        ear2="Dark Earring", -- 3
+        ear2="Malignance Earring", -- 3
         body="Flamma Korazin +2",
         hands="Fallen's Finger Gauntlets +1",
         waist="Eschan Stone", -- 5
@@ -151,7 +111,6 @@ function init_gear_sets()
         back="Niht Mantle", -- 10
         legs="Heathen's Flanchard +1",  -- 18 + 39macc
         feet="Ratri Sollerets" -- macc 33
-        -- feet="Flamma Gambieras +2" -- macc 33
     }
            
 	sets.midcast['Enfeebling Magic'] = set_combine(sets.midcast['Dark Magic'], {
@@ -198,12 +157,12 @@ function init_gear_sets()
 		-- head="Carmine Mask +1",
         neck="Erra Pendant",
         -- ear1="Digni. Earring",
-        -- ear2="Malignance Earring",
+        ear2="Malignance Earring",
 		body="Flamma Korazin +2",
         hands="Flam. Manopolas +2",
         -- ring1="Stikini Ring +1",
         -- ring2="Stikini Ring +1",
-		-- back="Toro Cape",
+        back=gear.fc_jse_back,
         waist="Eschan Stone",
         -- legs="Eschite Cuisses",
         feet="Flam. Gambieras +2"
@@ -246,12 +205,12 @@ function init_gear_sets()
         ear1="Thrud Earring",
         ear2="Moonshade Earring",
         body="Ignominy Cuirass +2",
-		hands=Odyssean.Hands.WSD,
+		hands=gear.odyssean_wsd_head,
         ring1="Titan Ring",
         ring2="Karieyh Ring",
         back=gear.wsd_vit_jse_back,
         waist="Light Belt",
-        legs=Odyssean.Legs.WS,
+        legs=gear.odyssean_wsd_legs,
         feet="Sulevia's Leggings +2"
     }
 
@@ -259,7 +218,12 @@ function init_gear_sets()
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {neck="Combatant's Torque"})
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
-
+    sets.precast.WS.AtkCapped = set_combine(sets.precast.WS, {
+        head="Sakpata's Helm",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings"})
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
     sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {
         -- main="Apocalypse",
@@ -278,10 +242,12 @@ function init_gear_sets()
         legs="Ratri Cuisses",
         feet="Ratri Sollerets"
     })
+
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Catastrophe'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
 
     sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
         ammo="Knobkierrie",
@@ -296,9 +262,15 @@ function init_gear_sets()
         legs="Ratri Cuisses",
         feet="Ratri Sollerets"
     })
+
+    sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Cross Reaper'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
 	
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
-        head=Odyssean.Head.WSD,
+        head=gear.odyssean_wsd_head,
         hands=gear.odyssean_wsd_hands,
         ring2="Niqmaddu Ring",
         neck="Light Gorget",
@@ -310,21 +282,16 @@ function init_gear_sets()
         head="Fallen's Burgeonet +3",
         neck="Abyssal Bead Necklace +1",
     })
-    sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {
-        body="Fallen's Cuirass +3",
-        legs=Odyssean.Legs.WS
-    })
+    sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {body="Fallen's Cuirass +3",legs=gear.odyssean_wsd_legs})
     sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
-
-    sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {
-        ring1="Rufescent Ring",
-        neck="Shadow Belt"
-    })
+    sets.precast.WS['Torcleaver'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
+    sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {ring1="Rufescent Ring",neck="Shadow Belt"})
     sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Entropy'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Entropy'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
 
     sets.precast.WS['Quietus'] = set_combine(sets.precast.WS, {
         ammo="Knobkierrie",
@@ -488,9 +455,7 @@ function init_gear_sets()
     }
     sets.engaged.SomeAcc = set_combine(sets.engaged, {
         ear2="Telos Earring",
-        -- ring2="Regal Ring",
         ammo="Seething Bomblet +1",
-        body=Valorous.Body.WSD
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
         body="Flamma Korazin +2",
