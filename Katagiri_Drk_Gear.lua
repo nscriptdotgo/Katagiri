@@ -326,7 +326,8 @@ function init_gear_sets()
         legs="Sakpata's Cuisses",
     })
     sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})     
+    sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Resolution'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})    
            
      -- Sets to return to when not performing an action.
            
@@ -335,8 +336,7 @@ function init_gear_sets()
            
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {
-        -- ear1="Lugra Earring +1",
-        ear1="Lugra Earring",
+        ear1="Lugra Earring +1",
     }
 	sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
 	sets.AccDayMaxTPWSEars = {ear1="Mache Earring +1",ear2="Telos Earring"}
@@ -406,11 +406,13 @@ function init_gear_sets()
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
 
 	sets.defense.MDT = set_combine(sets.defense.PDT, {
-        head="Hjarrandi Helm", -- no haste
+        head="Sakpata's Helm",
+        body="Sakpata's Plate",
+        hands="Sakpata's Gauntlets",
+        legs="Sakpata's Cuisses",
+        feet="Sakpata's Leggings",
         neck="Loricate Torque +1",
-        body="Tartarus Platemail",
         ear1="Etiolation Earring",
-        --back="Impassive Mantle",
     })
 		
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
@@ -439,7 +441,7 @@ function init_gear_sets()
      
 	-- Engaged sets
 	sets.engaged = {
-        ammo="Ginsen",
+        ammo="Coiste Bodhar",
 		head="Flamma Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
@@ -466,17 +468,17 @@ function init_gear_sets()
         neck="Abyssal Bead Necklace +1",
         ear1="Cessance Earring",
         ear2="Telos Earring",
-		body="Flamm Korazin +2",
+		body="Flamma Korazin +2",
         hands="Flamma Manopolas +2",
-        -- ring1="Flamma Ring",
+        ring1="Flamma Ring",
         -- ring2="Ramuh Ring +1",
 		back=gear.da_jse_back,
         waist="Ioskeha Belt",
-        legs="Sulev. Cuisses +2",
+        legs="Sakpata's Cuisses",
         feet="Flam. Gambieras +2"
     }
     sets.engaged.Fodder = {
-        ammo="Ginsen",
+        ammo="Coiste Bodhar",
 		head="Flam. Zucchetto +2",
         neck="Asperity Necklace",
         ear1="Brutal Earring",
@@ -491,7 +493,7 @@ function init_gear_sets()
         feet="Flam. Gambieras +2"
     }
     sets.engaged.DT = {
-        ammo="Ginsen",
+        ammo="Coiste Bodhar",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
@@ -499,8 +501,8 @@ function init_gear_sets()
         feet="Sakpata's Leggings",
         ear1="Brutal Earring",
         ear2="Cessance Earring",
-        ring1="Moonbeam Ring",
-        neck="Loricate Torque +1",
+        ring1="Niqmaddu Ring",
+        neck="Abyssal Beads +1",
         ring2="Defending Ring",
         back=gear.da_jse_back,
         waist="Ioskeha Belt",
@@ -509,7 +511,7 @@ function init_gear_sets()
 	sets.engaged.SomeAcc.PDT = {
         -- main="Caladbolg",
         -- sub="Utu Grip",
-        ammo="Ginsen",
+        ammo="Coiste Bodhar",
         head="Sakpata's Helm",
         neck="Loricate Torque +1",
         ear1="Brutal Earring",
@@ -526,131 +528,18 @@ function init_gear_sets()
 	sets.engaged.Acc.PDT = {}
 	sets.engaged.FullAcc.PDT = {}
 	sets.engaged.Fodder.PDT = {}
---Example sets:
---[[
-    sets.engaged.Adoulin = {}
-	sets.engaged.SomeAcc.Adoulin = {}
-	sets.engaged.Acc.Adoulin = {}
-	sets.engaged.FullAcc.Adoulin = {}
-	sets.engaged.Fodder.Adoulin = {}
-	
-	sets.engaged.PDT = {}
-	sets.engaged.SomeAcc.PDT = {}
-	sets.engaged.Acc.PDT = {}
-	sets.engaged.FullAcc.PDT = {}
-	sets.engaged.Fodder.PDT = {}
-	
-	sets.engaged.PDT.Adoulin = {}
-	sets.engaged.SomeAcc.PDT.Adoulin = {}
-	sets.engaged.Acc.PDT.Adoulin = {}
-	sets.engaged.FullAcc.PDT.Adoulin = {}
-	sets.engaged.Fodder.PDT.Adoulin = {}
-	
-	sets.engaged.MDT = {}
-	sets.engaged.SomeAcc.MDT = {}
-	sets.engaged.Acc.MDT = {}
-	sets.engaged.FullAcc.MDT = {}
-	sets.engaged.Fodder.MDT = {}
-	
-	sets.engaged.MDT.Adoulin = {}
-	sets.engaged.SomeAcc.MDT.Adoulin = {}
-	sets.engaged.Acc.MDT.Adoulin = {}
-	sets.engaged.FullAcc.MDT.Adoulin = {}
-	sets.engaged.Fodder.MDT.Adoulin = {}
-	
-            -- Variations for TP weapon and (optional) offense/defense modes.  Code will fall back on previous
-            -- sets if more refined versions aren't defined.
-            -- If you create a set with both offense and defense modes, the offense mode should be first.
-            -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
--- Liberator melee sets
-    sets.engaged.Liberator = {}
-	sets.engaged.Liberator.SomeAcc = {}
-	sets.engaged.Liberator.Acc = {}
-	sets.engaged.Liberator.FullAcc = {}
-	sets.engaged.Liberator.Fodder = {}
-	
-    sets.engaged.Liberator.Adoulin = {}
-	sets.engaged.Liberator.SomeAcc.Adoulin = {}
-	sets.engaged.Liberator.Acc.Adoulin = {}
-	sets.engaged.Liberator.FullAcc.Adoulin = {}
-	sets.engaged.Liberator.Fodder.Adoulin = {}
-	
-    sets.engaged.Liberator.AM = {}
-	sets.engaged.Liberator.SomeAcc.AM = {}
-	sets.engaged.Liberator.Acc.AM = {}
-	sets.engaged.Liberator.FullAcc.AM = {}
-	sets.engaged.Liberator.Fodder.AM = {}
-	
-    sets.engaged.Liberator.Adoulin.AM = {}
-	sets.engaged.Liberator.SomeAcc.Adoulin.AM = {}
-	sets.engaged.Liberator.Acc.Adoulin.AM = {}
-	sets.engaged.Liberator.FullAcc.Adoulin.AM = {}
-	sets.engaged.Liberator.Fodder.Adoulin.AM = {}
-
-	sets.engaged.Liberator.PDT = {}
-	sets.engaged.Liberator.SomeAcc.PDT = {}
-	sets.engaged.Liberator.Acc.PDT = {}
-	sets.engaged.Liberator.FullAcc.PDT = {}
-	sets.engaged.Liberator.Fodder.PDT = {}
-	
-	sets.engaged.Liberator.PDT.Adoulin = {}
-	sets.engaged.Liberator.SomeAcc.PDT.Adoulin = {}
-	sets.engaged.Liberator.Acc.PDT.Adoulin = {}
-	sets.engaged.Liberator.FullAcc.PDT.Adoulin = {}
-	sets.engaged.Liberator.Fodder.PDT.Adoulin = {}
-	
-	sets.engaged.Liberator.PDT.AM = {}
-	sets.engaged.Liberator.SomeAcc.PDT.AM = {}
-	sets.engaged.Liberator.Acc.PDT.AM = {}
-	sets.engaged.Liberator.FullAcc.PDT.AM = {}
-	sets.engaged.Liberator.Fodder.PDT.AM = {}
-	
-	sets.engaged.Liberator.PDT.Adoulin.AM = {}
-	sets.engaged.Liberator.SomeAcc.PDT.Adoulin.AM = {}
-	sets.engaged.Liberator.Acc.PDT.Adoulin.AM = {}
-	sets.engaged.Liberator.FullAcc.PDT.Adoulin.AM = {}
-	sets.engaged.Liberator.Fodder.PDT.Adoulin.AM = {}
-	
-	sets.engaged.Liberator.MDT = {}
-	sets.engaged.Liberator.SomeAcc.MDT = {}
-	sets.engaged.Liberator.Acc.MDT = {}
-	sets.engaged.Liberator.FullAcc.MDT = {}
-	sets.engaged.Liberator.Fodder.MDT = {}
-	
-	sets.engaged.Liberator.MDT.Adoulin = {}
-	sets.engaged.Liberator.SomeAcc.MDT.Adoulin = {}
-	sets.engaged.Liberator.Acc.MDT.Adoulin = {}
-	sets.engaged.Liberator.FullAcc.MDT.Adoulin = {}
-	sets.engaged.Liberator.Fodder.MDT.Adoulin = {}
-	
-	sets.engaged.Liberator.MDT.AM = {}
-	sets.engaged.Liberator.SomeAcc.MDT.AM = {}
-	sets.engaged.Liberator.Acc.MDT.AM = {}
-	sets.engaged.Liberator.FullAcc.MDT.AM = {}
-	sets.engaged.Liberator.Fodder.MDT.AM = {}
-	
-	sets.engaged.Liberator.MDT.Adoulin.AM = {}
-	sets.engaged.Liberator.SomeAcc.MDT.Adoulin.AM = {}
-	sets.engaged.Liberator.Acc.MDT.Adoulin.AM = {}
-	sets.engaged.Liberator.FullAcc.MDT.Adoulin.AM = {}
-	sets.engaged.Liberator.Fodder.MDT.Adoulin.AM = {}
-]]--
 	--Extra Special Sets
 	
 	sets.buff.Souleater = {}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
-	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
-        waist="Chaac Belt"
-    })
+	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.Montante = {main="Montante +1",sub="Gracile Grip"}
-    -- sets.weapons.Zulfiqar = {main="Zulfiqar",sub="Gracile Grip"}
-    -- sets.weapons.Cronus = {main="Cronus",sub="Gracile Grip"}
-    sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Gracile Grip"}
-	sets.weapons.Apocalypse = {main="Apocalypse",sub="Gracile Grip"}
+	sets.weapons.Montante = {main="Montante +1",sub="Utu Grip"}
+    sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Utu Grip"}
+	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
 	
     end
 	

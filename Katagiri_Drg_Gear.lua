@@ -323,23 +323,22 @@ function init_gear_sets()
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Petrov Ring",ring2="Niqmaddu Ring",
 		back="Brigantia's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
 
-		sets.engaged.DT = {
-			-- ammo="Aurgelmir Orb +1",
-			ammo="Coiste Bodhar",
-			head="Flam. Zucchetto +2",
-			neck="Dgn. Collar +1",
-			ear1="Brutal Earring",
-			ear2="Sherida Earring",
-			-- body=gear.valorous_wsd_body,
-			body="Flamma Korazin +2",
-			-- hands=gear.valorous_acc_hands,
-			ring1="Petrov Ring",
-			ring2="Niqmaddu Ring",
-			back=gear.da_jse_back,
-			waist="Ioskeha Belt",
-			legs="Sulev. Cuisses +2",
-			feet="Flam. Gambieras +2"
-		}
+	sets.engaged.DT = {
+		-- ammo="Aurgelmir Orb +1",
+		ammo="Coiste Bodhar",
+		head="Hjarrandi Helm",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulev. Cuisses +2",
+		feet="Sulev. Leggings +2",
+		neck="Loricate Torque +1",
+		waist="Flume Belt +1",
+		left_ear="Sherida Earring",
+		right_ear="Brutal Earring",
+		left_ring="Defending Ring",
+		right_ring="Niqmaddu Ring",
+		back=gear.da_jse_back
+	}
     sets.engaged.AM = {}
     sets.engaged.AM.SomeAcc = {}
 	sets.engaged.AM.Acc = {}
@@ -357,33 +356,6 @@ function init_gear_sets()
 	sets.engaged.AM.Acc.PDT = {}
     sets.engaged.AM.FullAcc.PDT = {}
     sets.engaged.AM.Fodder.PDT = {}
-		
-	--[[ Melee sets for in Adoulin, which has an extra 2% Haste from Ionis.
-	
-    sets.engaged.Adoulin = {}
-    sets.engaged.Adoulin.SomeAcc = {}
-	sets.engaged.Adoulin.Acc = {}
-    sets.engaged.Adoulin.FullAcc = {}
-    sets.engaged.Adoulin.Fodder = {}
-
-    sets.engaged.Adoulin.AM = {}
-    sets.engaged.Adoulin.AM.SomeAcc = {}
-	sets.engaged.Adoulin.AM.Acc = {}
-    sets.engaged.Adoulin.AM.FullAcc = {}
-    sets.engaged.Adoulin.AM.Fodder = {}
-	
-    sets.engaged.Adoulin.PDT = {}
-    sets.engaged.Adoulin.SomeAcc.PDT = {}
-	sets.engaged.Adoulin.Acc.PDT = {}
-    sets.engaged.Adoulin.FullAcc.PDT = {}
-    sets.engaged.Adoulin.Fodder.PDT = {}
-	
-    sets.engaged.Adoulin.AM.PDT = {}
-    sets.engaged.Adoulin.AM.SomeAcc.PDT = {}
-	sets.engaged.Adoulin.AM.Acc.PDT = {}
-    sets.engaged.Adoulin.AM.FullAcc.PDT = {}
-    sets.engaged.Adoulin.AM.Fodder.PDT = {}
-	]]
 
 end
 
