@@ -7,7 +7,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Apocalypse','Montante','KajaChopper','None')
+	state.Weapons:options('Apocalypse','Montante','KajaChopper','LoxoticMace','None')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -327,7 +327,27 @@ function init_gear_sets()
     })
     sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})
-    sets.precast.WS['Resolution'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})    
+    sets.precast.WS['Resolution'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
+
+    sets.precast.WS['Judgment'] = set_combine(sets.precast.WS, {
+        ammo="Knobkierrie",
+        head="Ratri Sallet",
+        neck="Caro Necklace",
+        body="Ignominy Cuirass +2",
+        hands="Ratri Gadlings",
+        ring1="Rajas Ring",
+        ring2="Niqmaddu Ring",
+        back=gear.wsd_str_jse_back,
+        waist="Grunfeld Rope",
+        legs="Ratri Cuisses",
+        feet="Ratri Sollerets"
+    })
+
+    sets.precast.WS['Judgment'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Judgment'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Judgment'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Judgment'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Judgment'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
            
      -- Sets to return to when not performing an action.
            
@@ -505,7 +525,7 @@ function init_gear_sets()
         neck="Abyssal Beads +1",
         ring2="Defending Ring",
         back=gear.da_jse_back,
-        waist="Ioskeha Belt",
+        waist="Ioskeha Belt"
     }
     -- sets.engaged.PDT = {}
 	sets.engaged.SomeAcc.PDT = {
@@ -540,6 +560,7 @@ function init_gear_sets()
 	sets.weapons.Montante = {main="Montante +1",sub="Utu Grip"}
     sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Utu Grip"}
 	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
+    sets.weapons.LoxoticMace = {main="Loxotic Mace"}
 	
     end
 	

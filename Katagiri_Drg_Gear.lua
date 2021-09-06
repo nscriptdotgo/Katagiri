@@ -9,7 +9,7 @@ function user_job_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
-	state.Weapons:options('Trishula','ShiningOne','None')
+	state.Weapons:options('Trishula','ShiningOne','Naegling','None')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
     select_default_macro_book()
@@ -265,7 +265,8 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
-	sets.weapons.ShiningOne = {main="Shining One",sub="Gracile Grip"}
+	sets.weapons.ShiningOne = {main="Shining One",sub="Utu Grip"}
+	sets.weapons.Naegling = {main="Naegling"}
 	sets.weapons.None = {
 		-- main="Trishula",
 		-- sub="Utu Grip"
