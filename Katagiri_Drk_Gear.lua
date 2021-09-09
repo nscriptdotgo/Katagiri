@@ -560,7 +560,8 @@ function init_gear_sets()
 	sets.weapons.Montante = {main="Montante +1",sub="Utu Grip"}
     sets.weapons.KajaChopper = {main="Kaja Chopper",sub="Utu Grip"}
 	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
-    sets.weapons.LoxoticMace = {main="Loxotic Mace"}
+    sets.weapons.LoxoticMace = {main="Loxotic Mace +1"}
+    sets.weapons.None = {}
 	
     end
 	

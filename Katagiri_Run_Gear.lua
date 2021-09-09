@@ -61,7 +61,7 @@ function init_gear_sets()
 		ear2="Cryptic Earring",
 		ring1="Supershear Ring",
 		ring2="Odium Ring",
-		back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+		back=gear.enmity_jse_back
     }
 		 
     sets.Enmity.SIRD = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
@@ -87,7 +87,7 @@ function init_gear_sets()
 		ear2="Cryptic Earring",
 		ring1="Gelatinous Ring +1",
 		ring2="Odium Ring",
-		back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+		back=gear.enmity_jse_back
     }
 		
 	--------------------------------------
@@ -434,7 +434,7 @@ function init_gear_sets()
         --ring2="Stikini Ring +1",
         --back="Solemnity Cape", -- 7
         waist="Gishdubar Sash", --(10)
-        }
+    }
 		
 	sets.midcast['Wild Carrot'] = set_combine(sets.midcast.Cure, {})
 		
@@ -462,11 +462,11 @@ function init_gear_sets()
 
     sets.idle = {
         ammo="Homiliary",
-		head="Runeist's Bandeau +2",
+		head="Nyame Helm",
 		body="Runeist's Coat +2",
 		hands="Turms Mittens +1",
-		legs="Eri. Leg Guards +1",
-		feet="Erilaz Greaves +1",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Futhark Torque +1",
 		waist="Flume Belt +1",
 		left_ear="Odnowa Earring +1",
@@ -480,28 +480,28 @@ function init_gear_sets()
 			
 	sets.idle.Tank = {
 		ammo="Staunch Tathlum",
-        head="Fu. Bandeau +2",
+        head="Nyame Helm",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
 		ear2="Ethereal Earring",
-        body="Runeist's Coat +2",
-		hands=gear.herculean_dt_hands,
+        body="Nyame Mail",
+		hands="Nyame Gauntlets",
 		ring1="Defending Ring",
 		ring2="Moonbeam Ring",
         back="Shadow Mantle",
 		waist="Flume Belt +1",
-		legs="Eri. Leg Guards +1",
-		feet="Erilaz Greaves +1"
+		legs="Nyame Flanchard",
+    	feet="Nyame Sollerets"
 	}
 
 	sets.idle.KiteTank = {
 		ammo="Staunch Tathlum",
-        head="Fu. Bandeau +2",
+        head="Nyame Helm",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
 		ear2="Ethereal Earring",
-        body="Runeist's Coat +2",
-		hands="Turms Mittens +1",
+        body="Nyame Mail",
+		hands="Nyame Gauntlets",
 		ring1="Defending Ring",
 		ring2="Moonbeam Ring",
         back="Shadow Mantle",
@@ -560,22 +560,22 @@ function init_gear_sets()
 		ear2="Ethereal Earring",
 		ring1="Gelatinous Ring +1",
 		ring2="Defending Ring",
-		back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+		back=gear.enmity_jse_back
     }
 	sets.defense.PDT_HP = {
         --sub="Refined Grip +1",
         ammo="Staunch Tathlum",
-        head="Runeist's Bandeau +2", --99
+		head="Nyame Helm",
         body="Runeist's Coat +2", --208
         hands="Turms Mittens +1", --74
         legs="Futhark Trousers +2", --87
-		feet="Runeist Bottes +1", --64
+		feet="Nyame Sollerets",
         neck="Futhark Torque +1", --6/6
         ear1="Ethereal Earring", --100
         ear2="Odnowa Earring +1", --100
 		ring1="Moonbeam Ring", --110
         ring2="Defending Ring", --10/10
-        back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}}, --5/5 250
+        back=gear.enmity_jse_back,
 		waist="Flume Belt +1",
     }
 	sets.defense.MDT = {
@@ -590,7 +590,7 @@ function init_gear_sets()
         ear2="Odnowa Earring +1", --0/2
         ring1="Fortified Ring", --5/5
 		ring2="Defending Ring", --10/10
-		back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},        
+		back=gear.enmity_jse_back,        
         waist="Flume Belt +1", --4/0
     }
 	sets.defense.MDT_HP = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
@@ -611,7 +611,7 @@ function init_gear_sets()
 		-- main="Aettir",
 		-- sub="Utu Grip",
 		ammo="Yamarang",
-        head="Erilaz Galea +1",
+		head="Nyame Helm",
 		neck="Futhark Torque +1",
 		ear1="Odnowa Earring +1",
 		ear2="Tuisto Earring",
@@ -619,27 +619,27 @@ function init_gear_sets()
 		hands="Turms Mittens +1",
 		ring1="Moonbeam Ring",
 		ring2="Defending Ring",
-        back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+        back=gear.enmity_jse_back,
 		waist="Flume Belt +1",
-		legs="Erilaz Leg Guards +1",
-		feet="Erilaz Greaves +1"
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 	}
 	sets.defense.MEVA_HP = {
 		-- main="Aettir",
 		-- sub="Utu Grip",
 		ammo="Staunch Tathlum",
-        head="Erilaz Galea +1",
+		head="Nyame Helm",
 		neck="Warder's Charm",
 		ear1="Odnowa Earring +1",
 		-- ear2="Sanare Earring",
         body="Runeist's Coat +2",
-		hands="Erilaz Gauntlets +1",
+		hands="Nyame Gauntlets",
 		ring1="Gelatinous Ring +1",
 		ring2="Moonbeam Ring",
-        back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+        back=gear.enmity_jse_back,
 		waist="Flume Belt +1",
-		legs="Rune. Trousers +1",
-		feet="Erilaz Greaves +1"
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 	}
 		
 	-- sets.defense.Death = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
@@ -678,30 +678,28 @@ function init_gear_sets()
 		ear2="Telos Earring",
 		ring1="Epona's Ring",
 		ring2="Niqmaddu Ring",
-		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
+		back=gear.stp_jse_back
     }
-    sets.engaged.SomeAcc = {
-        ammo="Yamarang",
-		head="Ayanmo Zucchetto +2",
-    }
-	sets.engaged.Acc = {
+    sets.engaged.SomeAcc = set_combine(sets.engaged, {
+			ammo="Yamarang",
+			head="Ayanmo Zucchetto +2",
+	})
+	sets.engaged.Acc = set_combine(sets.engaged, {
 		ammo="Yamarang",
 		legs="Meghanada Chausses +2", --+29
 		waist="Kentarch Belt +1", --+2
-        }
-	sets.engaged.HighAcc = {
+    })
+	sets.engaged.HighAcc = set_combine(sets.engaged, {
 		-- neck="Combatant's Torque", --+10
 		ring1="Moonbeam Ring", --+8
 		-- ring2="Chirich Ring +1", --+7
-        }
-	sets.engaged.FullAcc = {
+    })
+	sets.engaged.FullAcc = set_combine(sets.engaged, {
 		-- neck="Combatant's Torque", --+10
 		ring1="Moonbeam Ring", --+8
 		-- ring2="Chirich Ring +1", --+7
-        }
+    })
     sets.engaged.DTLite = {
-		-- main={ name="Aettir", augments={'Accuracy+70','Mag. Evasion+50','Weapon skill damage +10%',}},
-		-- sub="Refined Grip +1",
 		ammo="Staunch Tathlum",
 		head="Ayanmo Zucchetto +2",
 		body="Ayanmo Corazza +2",
@@ -714,7 +712,7 @@ function init_gear_sets()
 		right_ear="Telos Earring",
 		left_ring="Moonbeam Ring",
 		right_ring="Defending Ring",
-		back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
+		back=gear.stp_jse_back
 	}
     -- sets.engaged.SomeAcc.DTLite = {
 	-- 	-- main="Lionheart",
@@ -743,7 +741,7 @@ function init_gear_sets()
 		hands="Turms Mittens +1",
 		ring1="Ilabrat Ring",
 		ring2="Petrov Ring",
-		back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
+		back=gear.stp_jse_back,
 		waist="Kentarch Belt +1",
 		legs="Aya. Cosciales +2",
 		feet="Meg. Jam. +2"
@@ -762,18 +760,18 @@ function init_gear_sets()
     --         back="Moonbeam Cape",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
     sets.engaged.Tank = {
         ammo="Staunch Tathlum", --2/2
-        head="Fu. Bandeau +2", --6/0
-        body="Futhark Coat +3", --9/9
+		head="Nyame Helm",
+		body="Nyame Mail",
 		hands="Turms Mittens +1",
-		legs="Erilaz Leg Guards +1",
-		feet="Erilaz Greaves +1",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck="Futhark Torque +1",
 		waist="Flume Belt +1",
 		ear1="Etiolation Earring",
 		ear2="Ethereal Earring",
 		ring1="Gelatinous Ring +1",
 		ring2="Defending Ring",
-		back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+		back=gear.enmity_jse_back
     }
 	sets.engaged.Tank_HP = {
         --sub="Refined Grip +1",
@@ -788,7 +786,7 @@ function init_gear_sets()
         ear2="Odnowa Earring +1", --100
 		ring1="Moonbeam Ring", --110
         ring2="Supershear Ring", --70
-		back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
+		back=gear.enmity_jse_back,
 		waist="Flume Belt +1",
     }
     sets.engaged.SomeAcc.Tank = set_combine(sets.engaged.Tank, {
