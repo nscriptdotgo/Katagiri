@@ -20,11 +20,11 @@ gear.herculean_treasure_hands = {name="Herculean Gloves", augments={'"Store TP"+
 gear.herculean_refresh_hands = {name="Herculean Gloves",augments={'Enmity+2','Pet: "Store TP"+4','"Refresh"+1',}}
 gear.herculean_waltz_hands = {name="Herculean Gloves",augments={'Rng.Acc.+16','"Waltz" potency +11%','AGI+1',}}
 gear.herculean_waltz_body = {name="Herculean Vest",augments={'Attack+26','"Waltz" potency +11%','AGI+4','Accuracy+5',}}
-gear.herculean_wsd_body = {name="Herculean Vest",augments={'Accuracy+11','Weapon skill damage +5%','DEX+7',}}
+gear.herculean_wsd_body = { name="Herculean Vest", augments={'Attack+16','"Dual Wield"+6','DEX+10',}}
 -- need to roll WSD5 and STR8 on legs on these for Savage Blade
 -- second pair of legs with MAB
 --- herc feet with TA4
-gear.herculean_wsd_head = {name="Herculean Helm",augments={'Accuracy+8','Attack+24','Weapon skill damage +3%','DEX+5',}}
+gear.herculean_wsd_head = { name="Herculean Helm", augments={'Attack+24','Weapon skill damage +3%','DEX+5','Accuracy+8',}}
 gear.herculean_dt_legs = {name="Herculean Trousers",augments={'Attack+15','Damage taken-4%','STR+3','Accuracy+12',}}
 gear.herculean_wsd_legs = {name="Herculean Trousers",augments={'Weapon skill damage +5%','DEX+8','Accuracy+13','Attack+14',}}
 gear.herculean_wsd_str_legs = {name="Herculean Trousers",augments={'Weapon skill damage +4%','STR+8','Accuracy+11','Attack+19',}}
