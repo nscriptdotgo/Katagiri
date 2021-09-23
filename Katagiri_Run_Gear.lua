@@ -125,7 +125,7 @@ function init_gear_sets()
 		ear2="Tuisto Earring",
 		ring2="Gelatinous Ring +1", --70
         ring1="Moonbeam Ring", --110
-        back=gear.enmity_jse_back --6/6
+        back=gear.enmity_jse_back, --6/6
         waist="Flume Belt +1",
         })
     sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})

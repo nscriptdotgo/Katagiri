@@ -41,14 +41,14 @@ function init_gear_sets()
 	--------------------------------------
 	-- Precast Sets
 	-- Precast sets to enhance JAs
-    sets.precast.JA['Diabolic Eye'] = {hands="Fallen's Finger Gauntlets +1"}
+    sets.precast.JA['Diabolic Eye']  = {hands="Fall. Fin. Gaunt. +1"}
 	sets.precast.JA['Arcane Circle'] = {}
-    sets.precast.JA['Souleater']    = {head="Ignominy burgeonet +1"}
-    sets.precast.JA['Weapon Bash']   = {hands="Ignominy Gauntlets +1"}
-	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard +1"}
-    sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +1"}
-    sets.precast.JA['Dark Seal']    = {head="Fallen's burgeonet +1"}
-	sets.precast.JA['Last Resort'] = {back=gear.wsd_str_jse_back}
+    sets.precast.JA['Souleater']     = {head="Ig. Burgonet +2"}
+    sets.precast.JA['Weapon Bash']   = {hands="Igno. Gauntlets +1"}
+	sets.precast.JA['Nether Void']   = {legs="Heath. Flanchard +1"}
+    sets.precast.JA['Blood Weapon']  = {body="Fall. Cuirass +1"}
+    sets.precast.JA['Dark Seal']     = {head="Fall. Burgeonet +1"}
+	sets.precast.JA['Last Resort']   = {back=gear.wsd_str_jse_back}
                    
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
@@ -99,17 +99,17 @@ function init_gear_sets()
  
 	sets.midcast['Dark Magic'] = {
         --ammo="Pemphredo Tathlum", 
-        head="Ratri Sallet", -- 45 macc
+        head="Flam. Zucchetto", -- 45 macc
         neck="Deceiver's Torque", -- 10 dark + 17 macc
         ear1="Mani Earring",
         ear2="Malignance Earring", -- 3
         body="Flamma Korazin +2",
-        hands="Fallen's Finger Gauntlets +1",
+        hands="Flam. Manopolas +2",        
         waist="Eschan Stone", -- 5
         ring1="Evanescence Ring", -- 10
         ring2="Archon Ring", 
         back="Niht Mantle", -- 10
-        legs="Heathen's Flanchard +1",  -- 18 + 39macc
+        legs="Flamma Dirs +2",  -- 18 + 39macc
         feet="Ratri Sollerets" -- macc 33
     }
            
@@ -141,7 +141,7 @@ function init_gear_sets()
         ring2="Gelatinous Ring +1", -- matk 4
         waist="Oneiros Belt",
         legs="Ratri Cuisses",
-        feet="Amm Greaves"
+        feet="Ratri Sollerets"
     })
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {
         head="Flamma Zucchetto +2", -- 17
@@ -169,9 +169,12 @@ function init_gear_sets()
     }
                    
 	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
+        neck="Erra Pendant",
+        hands="Fall. Fin. Gaunt. +1",
         ring1="Evanescence Ring",
         ring2="Archon Ring",
-        back="Niht Mantle"
+        back="Niht Mantle",
+        feet="Ratri Sollerets"
     })
 	
 	sets.DrainWeapon = {main="Misanthropy",sub="Alber Strap"}
@@ -220,6 +223,7 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
     sets.precast.WS.AtkCapped = set_combine(sets.precast.WS, {
         head="Sakpata's Helm",
+        neck="Abyssal Bead Necklace +1",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Sakpata's Cuisses",
@@ -348,6 +352,29 @@ function init_gear_sets()
     sets.precast.WS['Judgment'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Judgment'].Fodder = set_combine(sets.precast.WS.Fodder, {})
     sets.precast.WS['Judgment'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
+
+
+    sets.precast.WS['Herculean Slash'] = set_combine(sets.precast.WS, {
+		ammo="Seeth. Bomblet +1",
+        head="Nyame Helm",
+        neck="Sanctity Necklace",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+        ring1="Archon Ring",
+        ring2="Karieyh Ring",
+        ear1="Malignance Earring",
+        ear2="Friomisi Earring",
+        back=gear.wsd_str_jse_back,
+        waist="Eschan Stone",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+    })
+
+    -- sets.precast.WS['Judgment'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    -- sets.precast.WS['Judgment'].Acc = set_combine(sets.precast.WS.Acc, {})
+    -- sets.precast.WS['Judgment'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    -- sets.precast.WS['Judgment'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    -- sets.precast.WS['Judgment'].AtkCapped = set_combine(sets.precast.WS, {head="Sakpata's Helm",body="Sakpata's Plate",hands="Sakpata's Gauntlets",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"})
            
      -- Sets to return to when not performing an action.
            
@@ -457,7 +484,7 @@ function init_gear_sets()
 	sets.passive.Reraise = {head="Twilight Helm",body="Twilight Mail"}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
-	sets.buff['Dark Seal'] = {head="Fallen's Burgeonet +1"} --head="Fallen's Burgeonet +3"
+	sets.buff['Dark Seal'] = {head="Fall. Burgeonet +1"} --head="Fallen's Burgeonet +3"
      
 	-- Engaged sets
 	sets.engaged = {

@@ -41,6 +41,7 @@ function init_gear_sets()
     --------------------------------------
 
 	sets.TreasureHunter = {
+        head="Wh. Rarab Cap +1",
         hands="Plunderer's Armlets +1",
         waist="Chaac Belt", 
         feet="Skulker's Poulaines +1"
@@ -329,18 +330,18 @@ function init_gear_sets()
 
     sets.idle = {
         ammo="Staunch Tathlum",
-        head="Meg. Visor +1",
+        head="Nyame Helm",
+        body="Nyame Mail", --9/9
+		hands="Turms Mittens +1",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
         neck="Loricate Torque +1",
         ear1="Etiolation Earring",
         ear2="Odnowa Earring +1",
-        body="Meg. Cuirie +2",
-        hands="Meg. Gloves +2",
         ring1="Defending Ring",
         ring2="Shadow Ring",
         -- back="Moonlight Cape",
         waist="Flume Belt +1",
-        legs="Meg. Chausses +2",
-        feet="Meg. Jam. +1"
     }
 		
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
@@ -411,9 +412,9 @@ function init_gear_sets()
         back=gear.da_jse_back,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.herculean_ta_feet}
 
     sets.engaged.DT = {ammo="Aurgelmir Orb +1",
-        head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Moonbeam Ring",ring2="Moonlight Ring",
-        back=gear.da_jse_back,waist="Reiki Yotai",legs="Malignance Tights",feet="Malignance Boots"}
+        head="Nyame Helm",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
+        back="Toutatis's Cape",waist="Windbuffet Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
     sets.engaged.SomeAcc.DT = {ammo="Staunch Tathlum +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Sherida Earring",
