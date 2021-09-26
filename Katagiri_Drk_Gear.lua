@@ -227,7 +227,8 @@ function init_gear_sets()
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
         legs="Sakpata's Cuisses",
-        feet="Sakpata's Leggings"})
+        feet="Sulevia's Leggings +2"
+    })
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
     sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {
         -- main="Apocalypse",

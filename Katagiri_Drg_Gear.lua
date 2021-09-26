@@ -2,7 +2,7 @@
 function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
-    state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
+    state.WeaponskillMode:options('Match','AtkCapped','Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.HybridMode:options('Normal','DT')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
@@ -186,6 +186,16 @@ function init_gear_sets()
 	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Impulse Drive'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Impulse Drive'].AtkCapped = set_combine(sets.precast.WS, {
+		head="Gleti's Mask",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
+		ring1="Karieyh Ring",
+		feet="Sulev. Leggings +2",
+		back=gear.wsd_str_jse_back
+	})
 	-- Savage Blade
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 		body=gear.valorous_wsd_body,
@@ -208,18 +218,18 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 		ammo="Staunch Tathlum",
-        head="Hjarrandi Helm",
+        head="Glet's Mask",
 		neck="Loricate Torque +1",
 		ear1="Odnowa Earring +1",
 		ear2="Infused Earring",
-		body="Sulevia's Plate. +2",
-		hands="Sulev. Gauntlets +2",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
 		ring1="Defending Ring",
 		ring2="Paguroidea Ring",
 		back="Shadow Mantle",
 		waist="Flume Belt +1",
-		legs="Carmine Cuisses +1",
-		feet="Amm Greaves"
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots"
 	}
 		
 	sets.idle.Refresh = {ammo="Staunch Tathlum +1",
@@ -327,13 +337,13 @@ function init_gear_sets()
 	sets.engaged.DT = {
 		-- ammo="Aurgelmir Orb +1",
 		ammo="Coiste Bodhar",
-		head="Hjarrandi Helm",
-		body="Sulevia's Plate. +2",
-		hands="Sulev. Gauntlets +2",
-		legs="Sulev. Cuisses +2",
-		feet="Sulev. Leggings +2",
+		head="Gleti's Mask",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
 		neck="Loricate Torque +1",
-		waist="Flume Belt +1",
+		waist="Ioskeha Belt",
 		left_ear="Sherida Earring",
 		right_ear="Brutal Earring",
 		left_ring="Defending Ring",
