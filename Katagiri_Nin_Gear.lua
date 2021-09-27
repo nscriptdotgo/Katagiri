@@ -13,7 +13,7 @@ function user_job_setup()
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None','SuppaBrutal','DWEarrings','DWMax'}
 
 	gear.wsd_jse_back = {name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
-	gear.da_jse_back = {name="Andartia's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	gear.da_jse_back = { name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
 
 	send_command('bind ^` input /ja "Innin" <me>')
 	send_command('bind !` input /ja "Yonin" <me>')
@@ -23,6 +23,8 @@ function user_job_setup()
 
 	utsusemi_cancel_delay = .3
 	utsusemi_ni_cancel_delay = .06
+
+    autonuke = "Raiton: San"
 
 	select_default_macro_book()
 end
@@ -139,10 +141,11 @@ function init_gear_sets()
         body="Dread Jupon",hands="Mochizuki Tekko +1",ring1="Defending Ring",ring2="Kishar Ring",
         legs="Rawhide Trousers",feet="Malignance Boots"}
 
-    sets.midcast.ElementalNinjutsu = {ammo="Pemphredo Tathlum",
-        head=gear.herculean_nuke_head,neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
-        body="Samnuha Coat",hands="Hattori Tekko +1",ring1="Shiva Ring +1",ring2="Metamor. Ring +1",
-        back="Toro Cape",waist="Eschan Stone",legs="Gyve Trousers",feet=gear.herculean_nuke_feet}
+    sets.midcast.ElementalNinjutsu = {ammo="Seething Bomblet +1",
+        head="Nyame Helm",neck="Sanctity Necklace",ear1="Hecate's Earring",ear2="Friomisi Earring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Metamor. Ring +1",
+        back=gear.tp_jse_back,waist="Eschan Stone",legs="Malignance Tights",feet="Nyame Sollerets"
+    }
 
 	sets.midcast.ElementalNinjutsu.Proc = sets.midcast.FastRecast
 
