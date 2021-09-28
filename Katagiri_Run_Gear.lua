@@ -258,7 +258,7 @@ function init_gear_sets()
         body="Meg. Cuirie +1",
 		hands="Meg. Gloves +2",
         legs="Meg. Chausses +2",
-		feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','DEX+11',}},
+		feet=gear.herculean_wsd_feet,
         neck="Caro Necklace",
         ear1="Moonshade Earring",
         ear2="Ishvara Earring",

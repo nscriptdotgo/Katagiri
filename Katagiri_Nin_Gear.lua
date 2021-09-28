@@ -9,10 +9,11 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('Heishi','LowBuff','MagicWeapons','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcKatana','ProcClub','ProcStaff')
+	state.Weapons:options('Kunimitsu','Heishi','LowBuff','MagicWeapons','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcKatana','ProcClub','ProcStaff')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None','SuppaBrutal','DWEarrings','DWMax'}
 
 	gear.wsd_jse_back = {name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+    gear.dex_wsd_jse_back = { name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
 	gear.da_jse_back = { name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
 
 	send_command('bind ^` input /ja "Innin" <me>')
@@ -81,10 +82,21 @@ function init_gear_sets()
     sets.precast.RA = {}
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
-    sets.precast.WS = {ammo="Voluspa Tathlum",
-        head="Lilitu Headpiece",neck="Fotia Gorget",ear1="Cessance Earring",ear2="Brutal Earring",
-        body="Adhemar Jacket +1",hands="Adhemar Wrist. +1",ring1="Ilabrat Ring",ring2="Regal Ring",
-        back=gear.da_jse_back,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.herculean_wsd_feet}
+    sets.precast.WS = {
+        -- ammo="Voluspa Tathlum",
+        head=gear.herculean_wsd_head,
+        neck="Light Gorget",
+        ear1="Cessance Earring",
+        ear2="Brutal Earring",
+        body="Adhemar Jacket +1",
+        hands="Adhemar Wrist. +1",
+        ring1="Ilabrat Ring",
+        ring2="Rajas Ring",
+        back=gear.dex_wsd_jse_back,
+        waist="Light Belt",
+        legs="Mummu Kecks +2",
+        feet=gear.herculean_wsd_feet
+    }
     sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {head="Dampening Tam",body="Ken. Samue",legs="Hiza. Hizayoroi +2",ear2="Telos Earring"})
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="C. Palug Stone",head="Ynglinga Sallet",neck="Combatant's Torque",ear2="Telos Earring",body="Ken. Samue",hands="Mummu Wrists +2",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {ammo="C. Palug Stone",head="Ynglinga Sallet",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",body="Mummu Jacket +2",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"})
@@ -144,8 +156,7 @@ function init_gear_sets()
     sets.midcast.ElementalNinjutsu = {ammo="Seething Bomblet +1",
         head="Nyame Helm",neck="Sanctity Necklace",ear1="Hecate's Earring",ear2="Friomisi Earring",
         body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Metamor. Ring +1",
-        back=gear.tp_jse_back,waist="Eschan Stone",legs="Malignance Tights",feet="Nyame Sollerets"
-    }
+        back=gear.tp_jse_back,waist="Eschan Stone",legs="Malignance Tights",feet="Nyame Sollerets"}
 
 	sets.midcast.ElementalNinjutsu.Proc = sets.midcast.FastRecast
 
@@ -220,10 +231,21 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
     -- Normal melee group
-    sets.engaged = {ammo="Seki Shuriken",
-        head="Dampening Tam",neck="Moonbeam Nodowa",ear1="Cessance Earring",ear2="Brutal Earring",
-        body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Gere Ring",ring2="Epona's Ring",
-        back=gear.da_jse_back,waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.herculean_ta_feet}
+    sets.engaged = {
+        ammo="Seki Shuriken",
+		head="Adhemar Bonnet +1",
+        neck="Moonbeam Nodowa",
+        ear1="Cessance Earring",
+        ear2="Brutal Earring",
+		body="Adhemar Jacket +1",
+        hands="Adhemar Wrist. +1",
+        ring1="Petrov Ring",
+        ring2="Epona's Ring",
+        back=gear.da_jse_back,
+        waist="Windbuffet Belt +1",
+        legs="Mummu Kecks +2",
+        feet="Amm Greaves"
+    }
 
     sets.engaged.SomeAcc = {ammo="Seki Shuriken",
         head="Dampening Tam",neck="Moonbeam Nodowa",ear1="Cessance Earring",ear2="Brutal Earring",
@@ -295,6 +317,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Heishi = {main="Heishi Shorinken",sub="Kanaria"}
+    sets.weapons.Kunimitsu = {main="Kunimitsu",sub="Tokko Katana"}
 	sets.weapons.Savage = {main="Naegling",sub="Kanaria"}
 	sets.weapons.Evisceration = {main="Tauret",sub="Kanaria"}
 	sets.weapons.LowBuff = {main="Heishi Shorinken",sub="Blurred Knife +1"}
