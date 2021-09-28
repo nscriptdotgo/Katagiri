@@ -118,7 +118,12 @@ function init_gear_sets()
     sets.precast.WS['Blade: Hi'].FullAcc = set_combine(sets.precast.WS.FullAcc, {hands="Ryuo Tekko",legs="Hiza. Hizayoroi +2"})
     sets.precast.WS['Blade: Hi'].Fodder = set_combine(sets.precast.WS['Blade: Hi'], {})
 
-    sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, {ammo="C. Palug Stone",ear1="Lugra Earring",ear2="Lugra Earring +1",legs="Jokushu Haidate"})
+    sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, {
+        ammo="C. Palug Stone",
+        ear1="Lugra Earring",
+        ear2="Lugra Earring +1",
+        legs="Jokushu Haidate"
+    })
     sets.precast.WS['Blade: Shun'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {ammo="C. Palug Stone",ear1="Lugra Earring",ear2="Lugra Earring +1",legs="Jokushu Haidate",feet="Malignance Boots"})
     sets.precast.WS['Blade: Shun'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Blade: Shun'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -191,10 +196,10 @@ function init_gear_sets()
     sets.resting = {}
 
     -- Idle sets
-    sets.idle = {ammo="Togakushi Shuriken",
+    sets.idle = {ammo="Shuriken",
         head="Nyame Helm",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
         body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Petrov Ring",
-        back=gear.tp_jse_back,waist="Windbuffet Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+        back=gear.tp_jse_back,waist="Windbuffet Belt +1",legs="Nyame Flanchard",feet="Hachiya Kyahan"}
 
     sets.idle.Sphere = set_combine(sets.idle, {body="Mekosu. Harness"})
 
@@ -232,7 +237,7 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {
-        ammo="Seki Shuriken",
+        ammo="Shuriken",
 		head="Adhemar Bonnet +1",
         neck="Moonbeam Nodowa",
         ear1="Cessance Earring",
@@ -327,7 +332,7 @@ function init_gear_sets()
 	sets.weapons.ProcScythe = {main="Ark Scythe",sub=empty}
 	sets.weapons.ProcPolearm = {main="Pitchfork +1",sub=empty}
 	sets.weapons.ProcGreatKatana = {main="Hardwood Katana",sub=empty}
-	sets.weapons.ProcKatana = {main="Kanaria",sub=empty}
+	sets.weapons.ProcKatana = {main="Debahocho",sub="Debahocho"}
 	sets.weapons.ProcClub = {main="Dream Bell +1",sub=empty}
 	sets.weapons.ProcStaff = {main="Terra's Staff",sub=empty}
 	sets.weapons.MagicWeapons = {main="Ochu",sub="Ochu"}
@@ -337,7 +342,7 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WAR' then
-        set_macro_page(1, 12)
+        set_macro_page(1, 11)
     elseif player.sub_job == 'RNG' then
         set_macro_page(1, 12)
     elseif player.sub_job == 'RDM' then
