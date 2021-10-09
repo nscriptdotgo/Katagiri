@@ -654,3 +654,10 @@ function check_trust()
 	end
 	return false
 end
+
+autows_list = {
+	['Apocalypse']='Cross Reaper',
+	['KajaChopper']='Upheaval',
+	['Montante']='Resolution',
+	['LoxoticMace']='Judgement',
+}
