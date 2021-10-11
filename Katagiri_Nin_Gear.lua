@@ -70,10 +70,19 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
 
-    sets.precast.FC = {ammo="Impatiens",
-		head=gear.herculean_fc_head,neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
-		body="Dread Jupon",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Kishar Ring",
-		legs="Rawhide Trousers",feet="Mochi. Kyahan +1"}
+    sets.precast.FC = {
+        ammo="Impatiens",
+		head=gear.herculean_fc_head,
+        neck="Voltsurge Torque",
+        ear1="Enchntr. Earring +1",
+        ear2="Loquac. Earring",
+		body="Taeon Tabard",
+        hands="Taeon Gloves",
+        ring1="Lebeche Ring",
+        ring2="Kishar Ring",
+		legs="Rawhide Trousers",
+        feet="Mochi. Kyahan +1"
+    }
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads",body="Passion Jacket",feet="Hattori Kyahan +1"})
 	sets.precast.FC.Shadows = set_combine(sets.precast.FC.Utsusemi, {ammo="Staunch Tathlum +1",ring1="Prolix Ring"})
@@ -119,17 +128,28 @@ function init_gear_sets()
     sets.precast.WS['Blade: Hi'].Fodder = set_combine(sets.precast.WS['Blade: Hi'], {})
 
     sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, {
-        ammo="C. Palug Stone",
-        ear1="Lugra Earring",
+        -- ammo="C. Palug Stone",
+        -- ear1="Lugra Earring",
         ear2="Lugra Earring +1",
-        legs="Jokushu Haidate"
+        -- legs="Jokushu Haidate"
     })
     sets.precast.WS['Blade: Shun'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {ammo="C. Palug Stone",ear1="Lugra Earring",ear2="Lugra Earring +1",legs="Jokushu Haidate",feet="Malignance Boots"})
     sets.precast.WS['Blade: Shun'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Blade: Shun'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Blade: Shun'].Fodder = set_combine(sets.precast.WS['Blade: Shun'], {})
 
-    sets.precast.WS['Blade: Ten'] = set_combine(sets.precast.WS, {ammo="C. Palug Stone",neck="Caro Necklace",ear1="Moonshade Earring",ear2="Lugra Earring +1",body=gear.herculean_wsd_body,back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Hiza. Hizayoroi +2",feet=gear.herculean_wsd_feet})
+    sets.precast.WS['Blade: Ten'] = set_combine(sets.precast.WS, {
+        -- ammo="C. Palug Stone",
+        neck="Caro Necklace",
+        ear1="Moonshade Earring",
+        ear2="Lugra Earring +1",
+        body=gear.herculean_wsd_body,
+        back=gear.dex_wsd_jse_back,
+        ring1="Karieyh Ring",
+        waist="Grunfeld Rope",
+        legs="Hiza. Hizayoroi +2",
+        feet=gear.herculean_wsd_feet
+    })
     sets.precast.WS['Blade: Ten'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {ammo="C. Palug Stone",neck="Caro Necklace",ear1="Moonshade Earring",body=gear.herculean_wsd_body,back=gear.wsd_jse_back,waist="Grunfeld Rope",legs="Hiza. Hizayoroi +2",feet=gear.herculean_wsd_feet})
     sets.precast.WS['Blade: Ten'].Acc = set_combine(sets.precast.WS.Acc, {back=gear.wsd_jse_back})
     sets.precast.WS['Blade: Ten'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
