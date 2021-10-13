@@ -659,5 +659,5 @@ autows_list = {
 	['Apocalypse']='Cross Reaper',
 	['KajaChopper']='Upheaval',
 	['Montante']='Torcleaver',
-	['LoxoticMace']='Judgement',
+	['LoxoticMace']='Judgment',
 }
