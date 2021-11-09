@@ -341,17 +341,17 @@ function init_gear_sets()
 	sets.Skillchain = {legs="Ryuo Hakama"}
 
 	-- Weapons sets
-	sets.weapons.Heishi = {main="Heishi Shorinken",sub="Kanaria"}
+	sets.weapons.Heishi = {main="Heishi Shorinken",sub="Kunimitsu"}
     sets.weapons.Gokotai = {main="Gokotai",sub="Kunimitsu"}
-	sets.weapons.Savage = {main="Naegling",sub="Kanaria"}
-	sets.weapons.Evisceration = {main="Tauret",sub="Kanaria"}
+	sets.weapons.Savage = {main="Naegling",sub="Kunimitsu"}
+	sets.weapons.Evisceration = {main="Tauret",sub="Kunimitsu"}
 	sets.weapons.LowBuff = {main="Heishi Shorinken",sub="Blurred Knife +1"}
 	sets.weapons.ProcDagger = {main="Chicken Knife II",sub=empty}
-	sets.weapons.ProcSword = {main="Ark Sword",sub=empty}
+	sets.weapons.ProcSword = {main="Excalipoor",sub=empty}
 	sets.weapons.ProcGreatSword = {main="Lament",sub=empty}
-	sets.weapons.ProcScythe = {main="Ark Scythe",sub=empty}
+	sets.weapons.ProcScythe = {main="Lost Sickle",sub=empty}
 	sets.weapons.ProcPolearm = {main="Pitchfork +1",sub=empty}
-	sets.weapons.ProcGreatKatana = {main="Hardwood Katana",sub=empty}
+	sets.weapons.ProcGreatKatana = {main="Zanmato",sub=empty}
 	sets.weapons.ProcKatana = {main="Debahocho",sub="Debahocho"}
 	sets.weapons.ProcClub = {main="Dream Bell +1",sub=empty}
 	sets.weapons.ProcStaff = {main="Terra's Staff",sub=empty}

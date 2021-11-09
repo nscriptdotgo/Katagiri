@@ -11,19 +11,17 @@ sets.precast.Item['Holy Water'] = {}
 
 --Augmented items that you'll use among multiple jobs.
 
+gear.taeon_phalanx_body = {name="Taeon Tabard",augments={'Spell interruption rate down -10%','Phalanx +3',}}
+gear.taeon_phalanx_hands = {name="Taeon Gloves",augments={'Spell interruption rate down -9%','Phalanx +3',}}
+gear.taeon_phalanx_feet = {name="Taeon Boots",augments={'Spell interruption rate down -8%','Phalanx +3',}}
+
 gear.herculean_fc_head = {name="Herculean Helm",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+13',}}
 gear.herculean_nuke_head = {name="Herculean Helm",augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Enmity-3','INT+9','"Mag.Atk.Bns."+13',}}
-gear.herculean_dt_hands = {name="Herculean Gloves",augments={'Attack+4','Damage taken-4%',}}
-gear.herculean_phalanx_hands = {name="Herculean Gloves", augments={'INT+6','MND+7','Phalanx +4','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}}
 gear.herculean_phalanx_legs = { name="Herculean Trousers", augments={'"Dbl.Atk."+2','Enmity-3','Phalanx +3','Accuracy+19 Attack+19',}}
-gear.herculean_treasure_hands = {name="Herculean Gloves", augments={'"Store TP"+7','INT+6','"Treasure Hunter"+2','Accuracy+17 Attack+17','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}
-gear.herculean_refresh_hands = {name="Herculean Gloves",augments={'Enmity+2','Pet: "Store TP"+4','"Refresh"+1',}}
-gear.herculean_waltz_hands = {name="Herculean Gloves",augments={'Rng.Acc.+16','"Waltz" potency +11%','AGI+1',}}
-gear.herculean_waltz_body = {name="Herculean Vest",augments={'Attack+26','"Waltz" potency +11%','AGI+4','Accuracy+5',}}
 gear.herculean_wsd_body = { name="Herculean Vest", augments={'Attack+16','"Dual Wield"+6','DEX+10',}}
 -- need to roll WSD5 and STR8 on legs on these for Savage Blade
 -- second pair of legs with MAB
---- herc feet with TA4
+-- herc feet with TA4
 gear.herculean_wsd_head = { name="Herculean Helm", augments={'Attack+24','Weapon skill damage +3%','DEX+5','Accuracy+8',}}
 gear.herculean_dt_legs = {name="Herculean Trousers",augments={'Attack+15','Damage taken-4%','STR+3','Accuracy+12',}}
 gear.herculean_wsd_legs = {name="Herculean Trousers",augments={'Weapon skill damage +5%','DEX+8','Accuracy+13','Attack+14',}}
