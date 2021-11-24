@@ -23,7 +23,8 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 
     autows = 'Cross Reaper'
-    autowstp = 1750
+    autowstp = 1250
+	autofood = 'Grape Daifuku'
 
     gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
     gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
@@ -461,7 +462,7 @@ function init_gear_sets()
 	sets.defense.MEVA = {
         ammo="Staunch Tathlum",
         head="Nyame Helm",
-        neck="Warder's Charm",
+        neck="Warder's Charm +1",
         ear1="Odnowa Earring +1",
         ear2="Ethereal Earring",
         body="Nyame Mail",
@@ -569,7 +570,7 @@ function init_gear_sets()
 	--Extra Special Sets
 	sets.buff.Souleater = {}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	sets.buff.Sleep = {head="Frenzy Sallet"}
+	sets.buff.Sleep = {neck="Vim Torque +1"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
@@ -596,6 +597,10 @@ function select_default_macro_book()
     else
         set_macro_page(5, 15)
     end
+end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 002')
 end
 
 buff_spell_lists = {

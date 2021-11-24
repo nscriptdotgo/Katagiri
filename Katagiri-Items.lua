@@ -12,8 +12,8 @@ sets.precast.Item['Holy Water'] = {}
 --Augmented items that you'll use among multiple jobs.
 
 gear.taeon_phalanx_body = {name="Taeon Tabard",augments={'Spell interruption rate down -10%','Phalanx +3',}}
-gear.taeon_phalanx_hands = {name="Taeon Gloves",augments={'Spell interruption rate down -9%','Phalanx +3',}}
-gear.taeon_phalanx_feet = {name="Taeon Boots",augments={'Spell interruption rate down -8%','Phalanx +3',}}
+gear.taeon_phalanx_hands = {name="Taeon Gloves",augments={'Spell interruption rate down -10%','Phalanx +3',}}
+gear.taeon_phalanx_feet = {name="Taeon Boots",augments={'Spell interruption rate down -10%','Phalanx +3',}}
 
 gear.herculean_fc_head = {name="Herculean Helm",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+13',}}
 gear.herculean_nuke_head = {name="Herculean Helm",augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Enmity-3','INT+9','"Mag.Atk.Bns."+13',}}

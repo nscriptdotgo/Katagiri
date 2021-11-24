@@ -264,14 +264,12 @@ function init_gear_sets()
 	sets.Kiting = {legs="Carmine Cuisses +1"}
 	sets.Reraise = {head="Twilight Helm",body="Twilight Mail"}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	sets.buff.Sleep = {head="Frenzy Sallet"}
+	sets.buff.Sleep = {neck="Vim Torque +1"}
 	
     -- Extra defense sets.  Apply these on top of melee or defense sets.
     sets.passive.MP = {ear2="Ethereal Earring",waist="Flume Belt +1"}
     sets.passive.Twilight = {head="Twilight Helm", body="Twilight Mail"}
-	sets.TreasureHunter = set_combine(sets.TreasureHunter, {
-		waist="Chaac Belt"
-	})
+	sets.TreasureHunter = set_combine(sets.TreasureHunter, {waist="Chaac Belt"})
 	
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
@@ -382,4 +380,8 @@ function select_default_macro_book()
     else
         set_macro_page(5, 13)
     end
+end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 005')
 end

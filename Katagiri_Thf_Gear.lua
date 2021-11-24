@@ -330,10 +330,10 @@ function init_gear_sets()
 
     sets.idle = {
         ammo="Staunch Tathlum",
-        head="Nyame Helm",
+        head="Malignance Chapeau",
         body="Nyame Mail", --9/9
 		hands="Turms Mittens +1",
-		legs="Nyame Flanchard",
+		legs="Malignance Tights",
 		feet="Nyame Sollerets",
         neck="Loricate Torque +1",
         ear1="Etiolation Earring",
@@ -412,9 +412,9 @@ function init_gear_sets()
         back=gear.da_jse_back,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.herculean_ta_feet}
 
     sets.engaged.DT = {ammo="Aurgelmir Orb +1",
-        head="Nyame Helm",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
+        head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
         body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
-        back="Toutatis's Cape",waist="Windbuffet Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+        back="Toutatis's Cape",waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Nyame Sollerets"}
 
     sets.engaged.SomeAcc.DT = {ammo="Staunch Tathlum +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Sherida Earring",
@@ -449,6 +449,10 @@ function select_default_macro_book()
     else
         set_macro_page(6, 5)
     end
+end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 003')
 end
 
 --Job Specific Trust Override
