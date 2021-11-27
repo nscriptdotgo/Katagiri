@@ -330,10 +330,10 @@ function init_gear_sets()
 
     sets.idle = {
         ammo="Staunch Tathlum",
-        head="Nyame Helm",
-        body="Nyame Mail", --9/9
+        head="Gleti's Mask",
+        body="Gleti's Cuirass", --9/9
 		hands="Turms Mittens +1",
-		legs="Nyame Flanchard",
+		legs="Gleti's Breeches",
 		feet="Turms Leggings +1",
         neck="Loricate Torque +1",
         ear1="Etiolation Earring",
@@ -356,7 +356,7 @@ function init_gear_sets()
 
     sets.defense.PDT = {ammo="Staunch Tathlum +1",
         head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Moonbeam Ring",ring2="Moonlight Ring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Shadow Mantle",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
     sets.defense.MDT = {ammo="Staunch Tathlum +1",
@@ -413,27 +413,27 @@ function init_gear_sets()
 
     sets.engaged.DT = {ammo="Aurgelmir Orb +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Sherida Earring",
-        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
-        back="Toutatis's Cape",waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Nyame Sollerets"}
+        body="Malignance Tabard",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Moonbeam Ring",
+        back=gear.da_jse_back,waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Nyame Sollerets"}
 
     sets.engaged.SomeAcc.DT = {ammo="Staunch Tathlum +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Sherida Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonlight Ring",
+        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Reiki Yotai",legs="Malignance Tights",feet="Malignance Boots"}
 		
     sets.engaged.Acc.DT = {ammo="Staunch Tathlum +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Odr Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonlight Ring",
+        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Reiki Yotai",legs="Malignance Tights",feet="Malignance Boots"}
 
     sets.engaged.FullAcc.DT = {ammo="Staunch Tathlum +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Odr Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonlight Ring",
+        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Reiki Yotai",legs="Malignance Tights",feet="Malignance Boots"}
 		
     sets.engaged.Fodder.DT = {ammo="Staunch Tathlum +1",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Suppanomimi",ear2="Sherida Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonlight Ring",
+        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Reiki Yotai",legs="Malignance Tights",feet="Malignance Boots"}
 end
 

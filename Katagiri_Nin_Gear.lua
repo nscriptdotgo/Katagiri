@@ -298,9 +298,9 @@ function init_gear_sets()
         back=gear.da_jse_back,waist="Windbuffet Belt +1",legs="Mummu Kecks +2",feet="Mummu Gamash. +2"}
 
     sets.engaged.DT = {ammo="Togakushi Shuriken",
-        head="Nyame Helm",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
-        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Petrov Ring",
-        back=gear.tp_jse_back,waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Nyame Sollerets"}
+        head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Brutal Earring",
+        body="Malignance Tabard",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Petrov Ring",
+        back=gear.da_jse_back,waist="Windbuffet Belt +1",legs="Malignance Tights",feet="Nyame Sollerets"}
 
 	sets.engaged.SomeAcc.DT = {ammo="Togakushi Shuriken",
         head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Cessance Earring",ear2="Telos Earring",
