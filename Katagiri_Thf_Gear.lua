@@ -330,11 +330,11 @@ function init_gear_sets()
 
     sets.idle = {
         ammo="Staunch Tathlum",
-        head="Malignance Chapeau",
+        head="Nyame Helm",
         body="Nyame Mail", --9/9
 		hands="Turms Mittens +1",
-		legs="Malignance Tights",
-		feet="Nyame Sollerets",
+		legs="Nyame Flanchard",
+		feet="Turms Leggings +1",
         neck="Loricate Torque +1",
         ear1="Etiolation Earring",
         ear2="Odnowa Earring +1",
@@ -355,19 +355,19 @@ function init_gear_sets()
     -- Defense sets
 
     sets.defense.PDT = {ammo="Staunch Tathlum +1",
-        head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Moonbeam Ring",ring2="Moonlight Ring",
-        back="Shadow Mantle",waist="Flume Belt +1",legs="Malignance Tights",feet="Malignance Boots"}
+        head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Moonbeam Ring",ring2="Moonlight Ring",
+        back="Shadow Mantle",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
     sets.defense.MDT = {ammo="Staunch Tathlum +1",
-        head="Malignance Chapeau",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Shadow Ring",
-        back="Engulfer Cape +1",waist="Engraved Belt",legs="Malignance Tights",feet="Malignance Boots"}
+        head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
+        body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Shadow Ring",
+        back="Engulfer Cape +1",waist="Engraved Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 		
 	sets.defense.MEVA = {ammo="Staunch Tathlum +1",
-		head=gear.herculean_fc_head,neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-		body="Adhemar Jacket +1",hands="Malignance Gloves",ring1="Vengeful Ring",ring2="Purity Ring",
-		back="Mujin Mantle",waist="Engraved Belt",legs="Malignance Tights",feet="Malignance Boots"}
+		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Vengeful Ring",ring2="Purity Ring",
+		back="Mujin Mantle",waist="Engraved Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 
     --------------------------------------

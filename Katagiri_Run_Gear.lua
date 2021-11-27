@@ -445,7 +445,7 @@ function init_gear_sets()
 		body="Runeist's Coat +3",
 		hands="Turms Mittens +1",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		feet="Turms Leggings +1",
 		neck="Futhark Torque +1",
 		waist="Flume Belt +1",
 		ear1="Odnowa Earring +1",
@@ -751,20 +751,20 @@ function init_gear_sets()
     --         back="Moonbeam Cape",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
     sets.engaged.Tank = {
 		main="Epeolatry",
-		sub="Utu Grip",
+		sub="Refined Grip +1",
         ammo="Staunch Tathlum", --2/2
 		head="Nyame Helm",
 		body="Nyame Mail",
 		hands="Turms Mittens +1",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		feet="Turms Leggings +1",
 		neck="Futhark Torque +1",
 		waist="Engraved Belt",
 		ear1="Odnowa Earring +1",
 		ear2="Cryptic Earring",
-		ring1="Gelatinous Ring +1",
+		ring1="Defending Ring",
 		ring2="Moonbeam Ring",
-		back=gear.enmity_jse_back
+		back=gear.parry_jse_back
     }
 	sets.engaged.Tank_HP = {
 		main="Epeolatry",
