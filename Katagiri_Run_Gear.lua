@@ -4,7 +4,7 @@ function user_job_setup()
 	state.OffenseMode:options('Normal','SomeAcc','Acc','HighAcc','FullAcc')
 	state.HybridMode:options('Normal','DTLite','Tank')
 	state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','HighAcc','FullAcc')
-	state.AutoBuffMode:options('Off','Auto','AutoMelee')
+	state.AutoBuffMode:options('Off','Auto','AutoMelee','AutoAOE')
 	state.CastingMode:options('Normal','SIRD')
 	state.PhysicalDefenseMode:options('PDT_HP','PDT')
 	state.MagicalDefenseMode:options('MDT_HP','BDT_HP','MDT','BDT')
@@ -490,7 +490,7 @@ function init_gear_sets()
         back=gear.enmity_jse_back,
 		waist="Flume Belt +1",
 		legs="Carmine Cuisses +1",
-		feet="Hippo. Socks"
+		feet="Nyame Sollerets"
 	}
 
 	sets.idle.Weak = {
@@ -861,6 +861,12 @@ buff_spell_lists = {
 	AutoMelee = {--Options for When are: Always, Engaged, Idle, OutOfCombat, Combat
 		{Name='Temper',		Buff='Multi Strikes',	SpellID=493,	When='Always'},
 		{Name='Refresh',	Buff='Refresh',			SpellID=109,	When='Idle'},
+	},
+
+	AutoAOE = {--Options for When are: Always, Engaged, Idle, OutOfCombat, Combat
+		{Name='Refresh',	Buff='Refresh',			SpellID=109,	When='Idle'},
+		{Name='Phalanx',	Buff='Phalanx',			SpellID=106,	When='Always'},
+		{Name='Cocoon',		Buff='Defense Boost',	SpellID=547,	When='Idle'},
 	},
 
 	Default = {
