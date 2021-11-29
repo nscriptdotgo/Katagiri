@@ -217,7 +217,7 @@ function init_gear_sets()
 
 	-- Idle sets
 	sets.idle = {
-		ammo="Staunch Tathlum",
+		ammo="Staunch Tathlum +1",
         head="Gleti's Mask",
 		neck="Loricate Torque +1",
 		ear1="Odnowa Earring +1",

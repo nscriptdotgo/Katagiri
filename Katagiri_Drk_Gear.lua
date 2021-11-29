@@ -137,7 +137,7 @@ function init_gear_sets()
         --body="Ratri Breastplate +1",
         hands="Ratri Gadlings",
         -- back="Trepidity Mantle",
-        ring1="Moonbeam Ring", -- matk 4
+        ring1="Moonlight Ring", -- matk 4
         ring2="Gelatinous Ring +1", -- matk 4
         waist="Oneiros Belt",
         legs="Ratri Cuisses",
@@ -392,7 +392,7 @@ function init_gear_sets()
     -- Idle sets
            
     sets.idle = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
@@ -408,7 +408,7 @@ function init_gear_sets()
     }
 		
     sets.idle.PDT = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
@@ -419,7 +419,7 @@ function init_gear_sets()
         left_ear="Odnowa Earring +1",
         right_ear="Infused Earring",
         left_ring="Defending Ring",
-        right_ring="Moonbeam Ring",
+        right_ring="Moonlight Ring",
         back="Shadow Mantle"
     }
 
@@ -429,7 +429,7 @@ function init_gear_sets()
            
     -- Defense sets
 	sets.defense.PDT = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Sakpata's Helm",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
@@ -438,7 +438,7 @@ function init_gear_sets()
         ear1="Odnowa Earring +1",
         ear2="Cessance Earring",
         ring1="Defending Ring",
-        ring2="Moonbeam Ring",
+        ring2="Moonlight Ring",
         neck="Loricate Torque +1",
         -- back="Grounded Mantle +1", -- 2% haste
         waist="Flume Belt +1", -- 9% haste
@@ -460,7 +460,7 @@ function init_gear_sets()
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
 		
 	sets.defense.MEVA = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Nyame Helm",
         neck="Warder's Charm +1",
         ear1="Odnowa Earring +1",
@@ -468,7 +468,7 @@ function init_gear_sets()
         body="Nyame Mail",
         hands="Nyame Gauntlets",
         ring1="Defending Ring",
-        ring2="Moonbeam Ring",
+        ring2="Moonlight Ring",
 		back="Moonlight Cape",
         waist="Flume Belt +1",
         legs="Nyame Flanchard",
@@ -547,23 +547,23 @@ function init_gear_sets()
     
     --[[sets.engaged.PDT = {ammo="Coiste Bodhar",
         head="Sakpata's Helm",neck="Abyssal Beads +1",ear1="Brutal Earring",ear2="Cessance Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonbeam Ring",ring2="Defending Ring",
+        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Defending Ring",
         back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings",}
     sets.engaged.SomeAcc.PDT = {ammo="Coiste Bodhar",
         head="Sakpata's Helm",neck="Abyssal Beads +1",ear1="Brutal Earring",ear2="Cessance Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonbeam Ring",ring2="Defending Ring",
+        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Defending Ring",
         back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings",}
     sets.engaged.Acc.PDT = {ammo="Coiste Bodhar",
         head="Sakpata's Helm",neck="Abyssal Beads +1",ear1="Brutal Earring",ear2="Cessance Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonbeam Ring",ring2="Defending Ring",
+        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Defending Ring",
         back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings",}
 	sets.engaged.FullAcc.PDT = {ammo="Coiste Bodhar",
         head="Sakpata's Helm",neck="Abyssal Beads +1",ear1="Brutal Earring",ear2="Cessance Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonbeam Ring",ring2="Defending Ring",
+        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Defending Ring",
         back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings",}
 	sets.engaged.Fodder.PDT = {ammo="Coiste Bodhar",
         head="Sakpata's Helm",neck="Abyssal Beads +1",ear1="Brutal Earring",ear2="Cessance Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonbeam Ring",ring2="Defending Ring",
+        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Moonlight Ring",ring2="Defending Ring",
         back=gear.da_jse_back,waist="Ioskeha Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings",}
     ]]--
 

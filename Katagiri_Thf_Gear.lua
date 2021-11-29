@@ -329,7 +329,7 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
     sets.idle = {
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Gleti's Mask",
         body="Gleti's Cuirass", --9/9
 		hands="Turms Mittens +1",
