@@ -20,7 +20,6 @@ function user_job_setup()
 	gear.dex_wsd_jse_back = {name="Ogma's cape",augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
 	gear.parry_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Parrying rate+5%',}}
 
-
 	-- Additional local binds
 	send_command('bind !` gs c SubJobEnmity')
 	send_command('bind @` gs c cycle RuneElement')
@@ -533,20 +532,20 @@ function init_gear_sets()
 	
 	sets.defense.PDT = {
 		main="Epeolatry",
-		sub="Utu Grip",
+		sub="Refined Grip +1",
         ammo="Staunch Tathlum +1", --2/2
 		head="Nyame Helm",
-        body="Nyame Mail", --9/9
+		body="Nyame Mail",
 		hands="Turms Mittens +1",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		feet="Turms Leggings +1",
 		neck="Futhark Torque +1",
-		waist="Flume Belt +1",
-		ear1="Etiolation Earring",
-		ear2="Ethereal Earring",
+		waist="Engraved Belt",
+		ear1="Odnowa Earring +1",
+		ear2="Cryptic Earring",
 		ring1="Defending Ring",
 		ring2="Moonlight Ring",
-		back=gear.enmity_jse_back
+		back=gear.parry_jse_back
     }
 	sets.defense.PDT_HP = {
 		main="Epeolatry",

@@ -7,7 +7,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal','PDT','Refresh','Reraise')
-	state.Weapons:options('Apocalypse','Montante','KajaChopper','Savage','LoxoticMace','None')
+	state.Weapons:options('Apocalypse','Montante','KajaChopper','Savage','LoxoticMace','None','BreakWeapon')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
@@ -26,7 +26,7 @@ function user_job_setup()
     autowstp = 1250
 	autofood = 'Grape Daifuku'
 
-    gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+    gear.da_jse_back = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
     gear.wsd_vit_jse_back = { name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
     gear.fc_jse_back = { name="Ankou's Mantle", augments={'"Fast Cast"+10',}}
 
@@ -579,6 +579,7 @@ function init_gear_sets()
 	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
     sets.weapons.Savage = {main="Naegling",sub="Blurred Shield +1"}
     sets.weapons.LoxoticMace = {main="Loxotic Mace +1",sub="Blurred Shield +1"}
+    sets.weapons.BreakWeapon = {main="Death Sickle",sub="Utu Grip"}
     sets.weapons.None = {}
 	
     end
@@ -657,4 +658,5 @@ autows_list = {
 	['Montante']='Torcleaver',
     ['Savage']='Savage Blade',
 	['LoxoticMace']='Judgment',
+    ['BreakWeapon']='Quietus',
 }
