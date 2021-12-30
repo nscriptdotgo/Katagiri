@@ -333,9 +333,8 @@ function init_gear_sets()
 		back="Brigantia's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
 
 	sets.engaged.DT = {
-		-- ammo="Aurgelmir Orb +1",
 		ammo="Coiste Bodhar",
-		head="Gleti's Mask",
+		head="Hjarrandi Helm",
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
 		legs="Gleti's Breeches",
