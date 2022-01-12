@@ -690,7 +690,7 @@ function init_gear_sets()
 		sub="Utu Grip",
 		ammo="Staunch Tathlum +1", --2
 		head="Ayanmo Zucchetto +2", --3
-		body="Ayanmo Corazza +2", --6
+		body="Ashera Harness", --6
 		hands="Nyame Gauntlets",
 		legs="Meg. Chausses +2",
 		feet="Nyame Sollerets",
@@ -727,7 +727,7 @@ function init_gear_sets()
 		neck="Anu Torque",
 		ear1="Telos Earring",
 		ear2="Sherida Earring",
-		body="Runeist's Coat +3",
+		body="Ashera Harness",
 		hands="Turms Mittens +1",
 		ring1="Ilabrat Ring",
 		ring2="Petrov Ring",
@@ -753,7 +753,7 @@ function init_gear_sets()
 		sub="Refined Grip +1",
         ammo="Staunch Tathlum +1", --2/2
 		head="Nyame Helm",
-		body="Nyame Mail",
+		body="Ashera Harness",
 		hands="Turms Mittens +1",
 		legs="Nyame Flanchard",
 		feet="Turms Leggings +1",
