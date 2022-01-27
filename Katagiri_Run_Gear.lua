@@ -19,6 +19,7 @@ function user_job_setup()
 	gear.da_jse_back = {name="Ogma's cape",augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10', 'Damage taken-5%',}}
 	gear.dex_wsd_jse_back = {name="Ogma's cape",augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
 	gear.parry_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Parrying rate+5%',}}
+	gear.fastcast_jse_back = {name="Ogma's Cape",augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
 
 	-- Additional local binds
 	send_command('bind !` gs c SubJobEnmity')
@@ -219,7 +220,7 @@ function init_gear_sets()
 		hands="Agwu's Gages",
 		ring1="Gelatinous Ring +1",
 		ring2="Moonlight Ring",
-        back=gear.enmity_jse_back,
+        back=gear.fastcast_jse_back,
 		waist="Audumbla Sash",
 		legs="Ayanmo Cosciales +2",
 		feet="Carmine Greaves"
@@ -235,7 +236,7 @@ function init_gear_sets()
 		hands="Nyame Gauntlets",
 		ring1="Gelatinous Ring +1",
 		ring2="Moonlight Ring",
-        back=gear.enmity_jse_back,
+        back=gear.fastcast_jse_back,
 		waist="Audumbla Sash",
 		legs="Futhark Trousers +2",
 		feet="Carmine Greaves"
@@ -345,7 +346,7 @@ function init_gear_sets()
 		hands="Agwu's Gages",
 		ring1="Gelatinous Ring +1",
 		ring2="Moonlight Ring",
-        back=gear.enmity_jse_back,
+        back=gear.fastcast_jse_back,
 		waist="Audumbla Sash",
 		legs="Ayanmo Cosciales +2",
 		feet="Carmine Greaves"
@@ -361,7 +362,7 @@ function init_gear_sets()
 		hands="Agwu's Gages",
 		ring1="Gelatinous Ring +1",
 		ring2="Moonlight Ring",
-        back=gear.enmity_jse_back,
+        back=gear.fastcast_jse_back,
 		waist="Audumbla Sash",
 		legs="Ayanmo Cosciales +2",
 		feet="Carmine Greaves"
@@ -370,7 +371,7 @@ function init_gear_sets()
 	sets.midcast.FastRecast.SIRD = {ammo="Staunch Tathlum +1",
 		head="Agwu's Cap",neck="Moonlight Necklace",ear1="Etiolation Earring",ear2="Loquac. Earring",
 		body="Emet Harness +1",hands="Rawhide Gloves",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-		back=gear.enmity_jse_back,waist="Audumbla Sash",legs="Carmine Cuisses +1",feet=gear.taeon_phalanx_feet}
+		back=gear.fastcast_jse_back,waist="Audumbla Sash",legs="Carmine Cuisses +1",feet=gear.taeon_phalanx_feet}
 
     sets.midcast['Enhancing Magic'] = set_combine(sets.midcast.FastRecast,{
 		head="Erilaz Galea +1",

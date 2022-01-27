@@ -487,7 +487,7 @@ function init_gear_sets()
 		head="Flamma Zucchetto +2",
         body="Sakpata's Plate",
         hands="Sakpata's Gauntlets",
-        legs="Sakpata's Cuisses",
+        legs="Ig. Flanchard +3",
 		feet="Flamma Gambieras +2",
 		neck="Abyssal Beads +1",
 		waist="Sailfi Belt +1",
@@ -511,7 +511,7 @@ function init_gear_sets()
         ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,
         waist="Ioskeha Belt",
-        legs="Sakpata's Cuisses",
+        legs="Ig. Flanchard +3",
         feet="Flam. Gambieras +2"
     }
     sets.engaged.Fodder = {
@@ -526,7 +526,7 @@ function init_gear_sets()
         ring2="Niqmaddu Ring",
 		back=gear.da_jse_back,
         waist="Ioskeha Belt",
-        legs="Sulev. Cuisses +2",
+        legs="Ig. Flanchard +3",
         feet="Flam. Gambieras +2"
     }
     sets.engaged.DT = {
@@ -538,7 +538,7 @@ function init_gear_sets()
         feet="Sakpata's Leggings",
         ear1="Brutal Earring",
         ear2="Cessance Earring",
-        ring1="Defending Ring",
+        ring1="Moonlight Ring",
         neck="Abyssal Beads +1",
         ring2="Niqmaddu Ring",
         back=gear.da_jse_back,
